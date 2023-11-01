@@ -3,7 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "LucasO21"
+  title: "lucaso21"
+  site-url: "https://lucaso21.github.io"
   navbar:
     left:
       - href: index.qmd
