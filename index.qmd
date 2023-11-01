@@ -1,10 +1,12 @@
 ---
 title: "Lucas Okwudishu"
+toc: false
 image: images/profile_pic.jpg
 about:
-  template: jolla
+  id: hero-heading
+  template: trestles
   image-width: 15em
-  image-shape: round
+  image-shape: rectangle
   links:
     - icon: linkedin
       text: LinkedIn
@@ -21,7 +23,7 @@ about:
     
 ---
 
-Hi I'm Lucas!
+# Hi I'm Lucas!
 
 I am a data and analytics professional with over 10 years of experience in business
 operations and analytics. I have expertise in multiple industries including retail,

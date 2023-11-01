@@ -1,5 +1,19 @@
 ---
-title: "Projects"
-description: Discover how I harness data's potential through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights. 
+title: "Explore My Data Science Portfolio"
+listing:
+  contents: projects
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  image-height: 10em
+page-layout: full
 title-block-banner: true
 ---
+
+Discover how I harness the power of data and analytics through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights.
+
+::: callout-tip
+Shorter excerpt of some of these projects are available on [Medium](https://clfo2014.medium.com/using-customer-segmentation-to-create-customer-personas-34366a5f5925)
+:::

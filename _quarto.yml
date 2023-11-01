@@ -9,7 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - projects.qmd
+      - href: projects.qmd
+        text: Projects
 
 format:
   html:
