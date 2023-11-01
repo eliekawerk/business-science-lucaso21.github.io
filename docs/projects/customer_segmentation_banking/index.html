@@ -280,7 +280,7 @@ Note
 <p>The <code>skim()</code> function from the <a href="https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html"><code>skimr</code></a> package can be used to get an overview of features in the dataset.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/skim.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/skim.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <hr>
@@ -294,7 +294,7 @@ Note
 <p>To further illustrate the skewness, we can plot histograms of all numeric features;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/00_histogram_feature_values.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/00_histogram_feature_values.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <hr>
@@ -303,7 +303,7 @@ Note
 <p>What does credit utilization look like for customers in this dataset. Below I plot histograms for customers who’s credit utilization is above 100% (meaning their current balance is higher then their credit limit) and customers who’s credit utilization is below 100% (meaning their balance is currently lower than their credit limit).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/01_credit_utilization_histogram.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/01_credit_utilization_histogram.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <p><strong>Observations:</strong></p>
@@ -329,7 +329,7 @@ Note
 <p>What other insights can we draw from this dataset before exploring the k-means algorithm. We just saw the distribution of <em>credit_utilization.</em> Another way we may want to segment customers is by looking at <em>cash_advance.</em> Given the high credit utilization we saw for some customers, it is obvious that some customers might be using their credit cards as a means to take out loans. The plot below shows average <em>cash_advance</em> for 3 cohorts of customers taking out cash advances. Low = less than $1000, Medium = $1001 - $5000, High = above $5000.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/02_cash_advance_customers.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/02_cash_advance_customers.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <p><strong>Observations:</strong></p>
@@ -340,13 +340,13 @@ Note
 <p>Another way we might want to segment customers is looking at <em>purchases</em> and <em>balance</em> to understand the spending habits of customers. In the plot below, we can see the distribution of <em>purchases</em> and <em>balance</em> for customers who have spent at least $100 on purchases -</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/03_purchase_balance_histogram.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/03_purchase_balance_histogram.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <p>We notice a fairly wide distribution of <em>purchases</em> and <em>balance.</em> We can look deeper and categorize customers into high/low purchase and balance cohorts based on median values. The plot below shows that categorization. Note that data used in the plot is filtered for customers with 0 <em>cash_advance</em>. We want to ensure that we are excluding the customers who are potentially using their credit cards for taking out loans;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/04_purchase_balance_cohorts.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/04_purchase_balance_cohorts.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <p><strong>Observation:</strong> We can observe the behaviors of the 4 cohorts:</p>
@@ -365,7 +365,7 @@ Note
 <p><a href="https://en.wikipedia.org/wiki/K-means_clustering">K-Means</a> algorithm is a popular unsupervised machine learning technique used for clustering data. The algorithm works by dividing a set of data points into <em>k</em> clusters based on their similarity. Initially, <em>k</em> centroids are chosen randomly from the data points, and each data point is assigned to the nearest centroid. Then, the centroids are moved to the center of their respective clusters, and the data points are re-assigned to the nearest centroid. This process is repeated until the centroids no longer move or a maximum number of iterations is reached.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/kmeans_before_after.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/kmeans_before_after.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <p>The k-means algorithm is widely used in various applications, such as customer segmentation, and anomaly detection. To learn more about the k-means algorithm, you can read up on the following sources:</p>
@@ -419,7 +419,7 @@ Note
 <p>The elbow point is typically used as a guide for deciding how many clusters to retain in the analysis. However, there is no hard and fast rule for selecting the number of clusters, this can be based on domain knowledge and knowledge about the dataset. The plot below is the skree plot for our analysis cohort;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/04_skree_plot.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/04_skree_plot.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <p><strong>Observation:</strong> We can see that the elbow point appears to be 5 clusters. However after running the first iteration of the k-means algorithm, I noticed that only 1 customer (<em>cust_id</em> C11004) was being assigned to cluster 1. I would assume that this customer has certain characteristics that stand out for the rest of the cohort. For this particular analysis, I just decided to exclude this customer and re-cluster again, using 4 clusters.</p>
@@ -432,7 +432,7 @@ Note
 <p>The plot below shows our cluster assignments from the k-means algorithm;</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/05_cluster_viz.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/05_cluster_viz.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <p><strong>Observation:</strong> Although not perfect, the k-means algorithm does a decent job of segmenting customers. We can see 4 distinct segments with a few customers that should probably be re-clustered, although a 3 dimensional plot may present a different perspective.</p>
@@ -443,7 +443,7 @@ Note
 <p>Now that we have our clusters of customers, we can begin analyzing these clusters to understand trends in customer characteristics of the different clusters. Note that we have already seen some of these trends during the explanatory data analysis phase, thus we can better understand how the k-means algorithm is working. To start, we can plot the distribution of some features of interest by cluster using boxplots. Let’s start by plotting the distribution of <em>balance</em>, <em>cash_advance</em>, <em>credit_utilization</em> and <em>purchases</em>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/06_feature_dist_by_cluster_1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/06_feature_dist_by_cluster_1.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <p><strong><em>Observation:</em></strong> Looking at the plot above, 2 distinct clusters stand out at first glance, cluster 4 and cluster 2:</p>
@@ -456,7 +456,7 @@ Note
 <p>Let us take a look at a few other feature distributions for our clusters. Below I show boxplots for <em>credit_limit</em>, <em>minimum_payments</em>, <em>payments</em> and <em>purchase_trx</em> for each cluster.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="png/07_feature_dist_by_cluster_2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="png/07_feature_dist_by_cluster_2.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 <p><strong>Observation:</strong> Once again we can gleam a few insights:</p>
@@ -988,7 +988,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>The <span class="in">`skim()`</span> function from the <span class="co">[</span><span class="ot">`skimr`</span><span class="co">](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html)</span> package </span>
 <span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>can be used to get an overview of features in the dataset. </span>
 <span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/skim.png)</span>{width=100% fig-align=center}</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/skim.png)</span>{width=90% fig-align=center}</span>
 <span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>---</span>
@@ -1010,7 +1010,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>To further illustrate the skewness, we can plot histograms of all numeric features;</span>
 <span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/00_histogram_feature_values.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/00_histogram_feature_values.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
@@ -1033,7 +1033,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>credit limit) and customers who's credit utilization is below 100% (meaning their balance is </span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>currently lower than their credit limit). </span>
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/01_credit_utilization_histogram.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/01_credit_utilization_histogram.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>**Observations:**</span>
 <span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
@@ -1060,7 +1060,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>means to take out loans. The plot below shows average *cash_advance* for 3 cohorts of </span>
 <span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>customers taking out cash advances. Low = less than $1000, Medium = $1001 - $5000, High = above $5000.</span>
 <span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/02_cash_advance_customers.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/02_cash_advance_customers.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>**Observations:**</span>
 <span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
@@ -1075,7 +1075,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>distribution of *purchases* and *balance* for customers who have spent at least $100 on purchases - </span>
 <span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/03_purchase_balance_histogram.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/03_purchase_balance_histogram.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>We notice a fairly wide distribution of *purchases* and *balance.* We can look deeper </span>
 <span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>and categorize customers into high/low purchase and balance cohorts based on median values.</span>
@@ -1083,7 +1083,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>for customers with 0 *cash_advance*. We want to ensure that we are excluding the customers</span>
 <span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>who are potentially using their credit cards for taking out loans;</span>
 <span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/04_purchase_balance_cohorts.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/04_purchase_balance_cohorts.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>**Observation:** We can observe the behaviors of the 4 cohorts:</span>
 <span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
@@ -1122,7 +1122,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>and the data points are re-assigned to the nearest centroid. This process is repeated until the </span>
 <span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>centroids no longer move or a maximum number of iterations is reached.</span>
 <span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/kmeans_before_after.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/kmeans_before_after.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>The k-means algorithm is widely used in various applications, such as customer segmentation, </span>
 <span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>and anomaly detection. To learn more about the k-means algorithm, you can read up on the </span>
@@ -1207,7 +1207,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>for our analysis cohort;</span>
 <span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/04_skree_plot.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/04_skree_plot.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>**Observation:** We can see that the elbow point appears to be 5 clusters. However after</span>
@@ -1227,7 +1227,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>The plot below shows our cluster assignments from the k-means algorithm;</span>
 <span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/05_cluster_viz.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/05_cluster_viz.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>**Observation:** Although not perfect, the k-means algorithm does a decent job of segmenting customers. We can see 4 distinct segments with a few customers that should probably be re-clustered, although a 3 dimensional plot may present a different perspective.</span>
 <span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
@@ -1242,7 +1242,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>the distribution of some features of interest by cluster using boxplots. Let's start</span>
 <span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>by plotting the distribution of *balance*, *cash_advance*, *credit_utilization* and *purchases*.</span>
 <span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/06_feature_dist_by_cluster_1.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/06_feature_dist_by_cluster_1.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>***Observation:*** Looking at the plot above, 2 distinct clusters stand out at first glance, cluster 4 and cluster 2: </span>
 <span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a></span>
@@ -1266,7 +1266,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>Let us take a look at a few other feature distributions for our clusters. Below I show</span>
 <span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>boxplots for *credit_limit*, *minimum_payments*, *payments* and *purchase_trx* for each cluster. </span>
 <span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/07_feature_dist_by_cluster_2.png)</span>{width=100% fig-align="center"}</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/07_feature_dist_by_cluster_2.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>**Observation:** Once again we can gleam a  few insights:</span>
 <span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a></span>
@@ -1446,6 +1446,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center"><span class="container"><strong>Made with <a href="https://quarto.org/" target="_blank">Posit Quarto</a></strong></span></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 

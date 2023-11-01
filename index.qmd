@@ -23,9 +23,55 @@ about:
     
 ---
 
-# Hi I'm Lucas!
+# Bio
+
+### Hi I'm Lucas!
 
 I am a data and analytics professional with over 10 years of experience in business
 operations and analytics. I have expertise in multiple industries including retail,
 manufacturing, non-profit and marketing.
+
+I have a proven track record of improving business operations and driving ROI true 
+insights and action.
+
+I love digging into data to understand how various business components affect top-line 
+revenue. This helps with better revenue modeling as well as understanding what 
+levers can be used to drive revenue while eliminating inefficiencies.
+
+---
+
+# Experience
+
+### Senior Data Analyst - Hubspot
+* **Tenure** - 2021 - Current
+* **Highlight** - Led analysis that uncovered over $1M savings in customer service reps headcount annually.
+
+### Data Analyst - United Way
+* **Tenure** - 2020 - 2021 
+* **Highlight** - Automated survey design and reporting process cutting previous reporting time by over 80%.
+
+### Supply Analyst - DAP
+* **Tenure** - 2019 - 2020 
+* **Highlight** - Reduced inventory carrying costs by over 20% from prior year by identifying inventory reduction opportunities and working with buyers and production managers on efficient inventory management.
+
+
+### Financial Ops Analyst - Whole Foods
+* **Tenure** - 2015 - 2018 
+* **Highlight** - Led a major process improvement project that resulted in a reduction of inventory costs by over $100K in the first half of 2018.
+
+---
+
+# Education
+
+### Certificate in Business Analytics
+* Institution - George Washington University (Washington, DC)
+* Year - 2021
+
+### Masters in Applied Economicst
+* Institution - Johns Hopkins University (Washington, DC)
+* Year - 2011
+
+### Bachelor of Science in Economics
+* Institution - University of Abuja (Nigeria)
+* Year - 2005
 
