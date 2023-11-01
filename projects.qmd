@@ -1,0 +1,5 @@
+---
+title: "Projects"
+description: Discover how I harness data's potential through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights. 
+title-block-banner: true
+---

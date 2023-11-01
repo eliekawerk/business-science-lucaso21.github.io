@@ -1,11 +1,29 @@
 ---
-title: "LucasO21"
+title: "Lucas Okwudishu"
+image: images/profile_pic.jpg
+about:
+  template: jolla
+  image-width: 15em
+  image-shape: round
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/lucasokwudishu
+    - icon: github
+      text: Github
+      href: https://github.com/LucasO21/
+    - icon: medium
+      text: Medium
+      href: https://medium.com/@clfo2014
+    - icon: envelope
+      text: Contact me
+      href: mailto:lokwudishu@gmail.com
+    
 ---
 
-This is a Quarto website.
+Hi I'm Lucas!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I am a data and analytics professional with over 10 years of experience in business
+operations and analytics. I have expertise in multiple industries including retail,
+manufacturing, non-profit and marketing.
 
-```{r}
-1 + 1
-```
