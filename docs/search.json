@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Lucas Okwudishu",
     "section": "",
-    "text": "Bio\n\nHi I’m Lucas!\nI am a data and analytics professional with over 10 years of experience in business operations and analytics. I have expertise in multiple industries including retail, manufacturing, non-profit and marketing.\nI have a proven track record of improving business operations and driving ROI true insights and action.\nI love digging into data to understand how various business components affect top-line revenue. This helps with better revenue modeling as well as understanding what levers can be used to drive revenue while eliminating inefficiencies.\n\n\n\n\nExperience\n\nSenior Data Analyst - Hubspot\n\nTenure - 2021 - Current\nHighlight - Led analysis that uncovered over $1M savings in customer service reps headcount annually.\n\n\n\nData Analyst - United Way\n\nTenure - 2020 - 2021\nHighlight - Automated survey design and reporting process cutting previous reporting time by over 80%.\n\n\n\nSupply Analyst - DAP\n\nTenure - 2019 - 2020\nHighlight - Reduced inventory carrying costs by over 20% from prior year by identifying inventory reduction opportunities and working with buyers and production managers on efficient inventory management.\n\n\n\nFinancial Ops Analyst - Whole Foods\n\nTenure - 2015 - 2018\nHighlight - Led a major process improvement project that resulted in a reduction of inventory costs by over $100K in the first half of 2018.\n\n\n\n\n\nEducation\n\nCertificate in Business Analytics\n\nInstitution - George Washington University (Washington, DC)\nYear - 2021\n\n\n\nMasters in Applied Economicst\n\nInstitution - Johns Hopkins University (Washington, DC)\nYear - 2011\n\n\n\nBachelor of Science in Economics\n\nInstitution - University of Abuja (Nigeria)\nYear - 2005"
+    "text": "Bio\n\nHi I’m Lucas!\nI am a data and analytics professional with over 10 years of experience in business operations and analytics. I have expertise in multiple industries including retail, manufacturing, non-profit and marketing.\nI have a proven track record of improving business operations and driving ROI true insights and action.\nI love digging into data to understand how various business components affect top-line revenue. This helps with better revenue modeling as well as understanding what levers can be used to drive revenue while eliminating inefficiencies.\n\n\n\n\nExperience\n\nSenior Data Analyst - Hubspot\n\nTenure - 2021 - Current\nHighlight - Led analysis that uncovered over $1M savings in customer service reps headcount annually.\n\n\n\nData Analyst - United Way\n\nTenure - 2020 - 2021\nHighlight - Automated survey design and reporting process cutting previous reporting time by over 80%.\n\n\n\nSupply Analyst - DAP\n\nTenure - 2019 - 2020\nHighlight - Reduced inventory carrying costs by over 20% from prior year by identifying inventory reduction opportunities and working with buyers and production managers on efficient inventory management.\n\n\n\nFinancial Ops Analyst - Whole Foods\n\nTenure - 2015 - 2018\nHighlight - Led a major process improvement project that resulted in a reduction of inventory costs by over $100K in the first half of 2018.\n\n\n\n\n\nEducation\n\nCertificate in Business Analytics\n\nInstitution - George Washington University  (Washington, DC)\nYear - 2021\n\n\n\nMasters in Applied Economics\n\nInstitution - Johns Hopkins University  (Washington, DC)\nYear - 2011\n\n\n\nBachelor of Science in Economics\n\nInstitution - University of Abuja (Nigeria)\nYear - 2005"
   },
   {
     "objectID": "about.html",
@@ -12,13 +12,6 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Explore My Data Science Portfolio",
-    "section": "",
-    "text": "Discover how I harness the power of data and analytics through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights.\n\n\n\n\n\n\nTip\n\n\n\nShorter excerpt of some of these projects are available on Medium\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nCustomer Segmentation & Persona Creation in the Banking Industry\n\n\nA Case Study Using K-Means Algorithm\n\n\n\n\ncustomer segmentation\n\n\n\n\n\n\n\n\n\n\n\nMay 13, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/customer_segmentation_banking/index.html",
@@ -103,5 +96,12 @@
     "title": "Lucas Okwudishu",
     "section": "",
     "text": "I am a data and analytics professional with over 10 years of experience in business operations and analytics. I have expertise in multiple industries including retail, manufacturing, non-profit and marketing.\nI have a proven track record of improving business operations and driving ROI true insights and action.\nI love digging into data to understand how various business components affect top-line revenue. This helps with better revenue modeling as well as understanding what levers can be used to drive revenue while eliminating inefficiencies."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Explore My Data Science Portfolio",
+    "section": "",
+    "text": "Discover how I harness the power of data and analytics through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights.\n\n\n\n\n\n\nNote\n\n\n\nShorter excerpt of some of these projects are available on Medium\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nCustomer Segmentation & Persona Creation in the Banking Industry\n\n\nA Case Study Using K-Means Algorithm\n\n\n\n\ncustomer segmentation\n\n\n\n\n\n\n\n\n\n\n\nMay 13, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\nNo matching items"
   }
 ]

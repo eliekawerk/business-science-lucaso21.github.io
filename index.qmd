@@ -64,11 +64,13 @@ levers can be used to drive revenue while eliminating inefficiencies.
 # Education
 
 ### Certificate in Business Analytics
-* Institution - George Washington University (Washington, DC)
+* Institution - George Washington University <br>
+(Washington, DC)
 * Year - 2021
 
-### Masters in Applied Economicst
-* Institution - Johns Hopkins University (Washington, DC)
+### Masters in Applied Economics
+* Institution - Johns Hopkins University <br> 
+(Washington, DC)
 * Year - 2011
 
 ### Bachelor of Science in Economics
