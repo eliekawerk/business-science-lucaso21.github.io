@@ -10,7 +10,6 @@ listing:
   image-height: 10em
 page-layout: full
 title-block-banner: true
-
 ---
 
 Discover how I harness the power of data and analytics through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights.

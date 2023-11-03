@@ -2,6 +2,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/toronto_shelter_project/index.html",
       "/projects/customer_segmentation_banking/index.html"
     ]
   }

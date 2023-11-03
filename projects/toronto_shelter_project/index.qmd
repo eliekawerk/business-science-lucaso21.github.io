@@ -1,0 +1,67 @@
+---
+title: "Advanced Predictive Analytics for Managing Overnight Shelter Capacity"
+subtitle: "Unifying Big Query DBT, H2O, and APIs for Social Good"
+date: 11/02/2023
+author: Lucas Okwudishu
+title-block-banner: true
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: flatly
+    code-fold: false
+    code-tools: true
+    page-layout: article
+link-citations: true
+categories: [predictive analytics]
+---
+
+# **Introduction**
+In the dynamic urban landscape of Toronto, overnight shelters represent more than 
+just a temporary haven for the homeless. These facilities are a vital component of 
+the city's social support network, providing safety and stability for individuals
+and families facing the harsh realities of urban life. As an essential service, 
+these shelters embody the collective effort to uphold the welfare of all citizens, 
+ensuring that the city's commitment to caring for its most vulnerable members is 
+not just a promise, but a reality.
+
+# **Problem Statement**
+
+The challenge lies in effectively forecasting the occupancy rates of these shelters. 
+Accurate predictions are not merely statistical triumphs; they are the an important tool
+in the complex machinery of social support, determining the operational efficacy 
+and resource optimization of these critical infrastructures. The implications of 
+such forecasts extend beyond the confines of the shelters themselves, influencing policy-making, 
+urban planning, and emergency response initiatives. The margin for error is narrow: underestimate, 
+and we risk leaving individuals or families exposed to the elements. Overestimate, 
+and we divert precious resources that could be utilized more effectively elsewhere. 
+The quest for a reliable prediction model is not just a technical endeavor, it is a 
+moral imperative to ensure that the well being of those in need is safeguarded.
+
+# **Solution Strategy**
+
+The proposed solution leverages the power of machine learning (ML) to analyze historical occupancy data and generate accurate forecasts for overnight shelter occupancy. The approach is to train sophisticated ML models that can identify patterns and trends from past data, considering various factors such as location, day of the week, month of the year, weather conditions, etc. By feeding the models with high-quality, historical occupancy data, they learn to anticipate future demands with a considerable degree of accuracy. This predictive capability is enhanced by incorporating advanced algorithms and ensemble methods that can adapt to the changing dynamics of urban life. The end goal is a robust model capable of aiding shelter administrators to anticipate nightly occupancy rates and thus manage their operations with unprecedented foresight and efficiency.
+
+# **Implementation Strategy**
+
+- **Data Collection and Management:**
+    - Utilize the Toronto Open Data API to collect historical occupancy data from multiple overnight shelters.
+    - Gather additional relevant datasets such as historical weather patterns.
+- **Data Storage:**
+    - Store the collected data securely in Google BigQuery, ensuring the database scales with the inflow of new data and is optimized for complex analytical queries.
+- **Data Transformation:**
+    - Implement DBT (Data Build Tool) to perform and manage necessary data transformations, ensuring that the data is clean, structured, and ready for model consumption.
+- **Machine Learning Model Development:**
+    - Utilize H2O AutoML, an automated machine learning platform, to build and train predictive models.
+    - Evaluate various models and their performances, tuning hyper-parameters and selecting the best-performing model for deployment.
+- **Prediction Deployment:**
+    - Deploy the trained machine learning model via a Shiny app.
+    - Implement robust app features that allow for real-time updates and the monitoring of model performance over time.
+    
+
+By following this implementation strategy, this project aims to harness the vast potential of ML to deliver a solution that not only serves the immediate needs of overnight shelters in Toronto but also sets a standard for data-driven decision-making in humanitarian efforts city-wide.
+
+The following sections walk through each step of the implementation strategy in more detail.
+
+
