@@ -190,10 +190,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#visualizing-clusters" id="toc-visualizing-clusters" class="nav-link" data-scroll-target="#visualizing-clusters"><strong>Visualizing Clusters</strong></a></li>
   <li><a href="#cluster-analysis" id="toc-cluster-analysis" class="nav-link" data-scroll-target="#cluster-analysis"><strong>Cluster Analysis</strong></a></li>
-  <li><a href="#customer-persona-product-recommendations" id="toc-customer-persona-product-recommendations" class="nav-link" data-scroll-target="#customer-persona-product-recommendations"><strong>Customer Persona / Product Recommendations</strong></a>
-  <ul class="collapse">
+  <li><a href="#customer-persona-product-recommendations" id="toc-customer-persona-product-recommendations" class="nav-link" data-scroll-target="#customer-persona-product-recommendations"><strong>Customer Persona / Product Recommendations</strong></a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><strong>Conclusion</strong></a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -212,7 +210,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="implementation-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="implementation-strategy"><strong>Implementation Strategy</strong></h2>
-<p>To implement customer segmentation and using the k-means algorithm, financial institutions should follow these steps: 1. Data Collection and Integration: Gather customer data from various sources, including transaction records, demographic information, and customer interactions. 2. Preprocessing and Feature Selection: Cleanse and preprocess the data, selecting relevant features for analysis, such as transaction frequency, average balance, age, and customer preferences. 3. K-Means Clustering: Apply the k-means algorithm to segment customers based on similar behavioral patterns. Determine the optimal number of clusters and assign customers to their respective segments. 4. Persona Creation: Develop personas for each customer segment, incorporating demographic information, behaviors, preferences, and goals. These personas should be representative of the segment’s characteristics and serve as a guide for targeted marketing strategies. 5. Implementation and Iteration: Implement personalized marketing campaigns and track the performance of the tailored strategies. Continuously evaluate and refine the segments and personas based on customer feedback and evolving market dynamics. The following pages, walk through a detailed case study of customer segmentation and persona creation using the k-means algorithm.</p>
+<p>To implement customer segmentation and using the k-means algorithm, financial institutions should follow these steps;</p>
+<ol type="1">
+<li><p>Data Collection and Integration: Gather customer data from various sources, including transaction records, demographic information, and customer interactions.</p></li>
+<li><p>Preprocessing and Feature Selection: Cleanse and preprocess the data, selecting relevant features for analysis, such as transaction frequency, average balance, age, and customer preferences.</p></li>
+<li><p>K-Means Clustering: Apply the k-means algorithm to segment customers based on similar behavioral patterns. Determine the optimal number of clusters and assign customers to their respective segments.</p></li>
+<li><p>Persona Creation: Develop personas for each customer segment, incorporating demographic information, behaviors, preferences, and goals. These personas should be representative of the segment’s characteristics and serve as a guide for targeted marketing strategies.</p></li>
+<li><p>Implementation and Iteration: Implement personalized marketing campaigns and track the performance of the tailored strategies. Continuously evaluate and refine the segments and personas based on customer feedback and evolving market dynamics.</p></li>
+</ol>
+<p>The following pages, walk through a detailed case study of customer segmentation and persona creation using the k-means algorithm.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -545,14 +551,14 @@ Note
 <p>These are just a few examples of how this bank can build customer personas from the various customer segments/clusters and market financial products to them. It is important that these financial products are mutually beneficial to both the bank and the customers.</p>
 <p>The bank can test the success of these financial products through various ways including experimentation (a/b testing), surveys, user analytics, net promoter score (NPS), pilot programs, etc.</p>
 <hr>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion"><strong>Conclusion</strong></h2>
+</section>
+<section id="conclusion" class="level1">
+<h1><strong>Conclusion</strong></h1>
 <p>In conclusion, customer segmentation and persona creation using the k-means algorithm have emerged as powerful tools in the banking industry. By leveraging data analytics and machine learning techniques, banks can gain a deeper understanding of their customers, tailor their offerings to specific segments, and deliver personalized experiences. The k-means algorithm enables the identification of distinct customer groups based on behavioral patterns and characteristics, allowing banks to develop targeted strategies, design relevant financial products, and enhance customer satisfaction. With customer segmentation and persona creation at the core of their business strategies, banks can foster stronger customer relationships, drive growth, and stay ahead in today’s competitive landscape.</p>
 
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -875,575 +881,581 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## __Implementation Strategy__</span></span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>To implement customer segmentation and using the k-means algorithm, financial institutions should follow</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>these steps:</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Data Collection and Integration: Gather customer data from various sources, including transaction</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>records, demographic information, and customer interactions.</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Preprocessing and Feature Selection: Cleanse and preprocess the data, selecting relevant features for</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>analysis, such as transaction frequency, average balance, age, and customer preferences.</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>K-Means Clustering: Apply the k-means algorithm to segment customers based on similar behavioral</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>patterns. Determine the optimal number of clusters and assign customers to their </span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>respective segments.</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Persona Creation: Develop personas for each customer segment, incorporating demographic </span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>information, behaviors, preferences, and goals. These personas should be representative of the segment’s</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>characteristics and serve as a guide for targeted marketing strategies.</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Implementation and Iteration: Implement personalized marketing campaigns and track the </span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>performance of the tailored strategies. Continuously evaluate and refine the segments and personas based</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>on customer feedback and evolving market dynamics.</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>The following pages, walk through a detailed case study of customer segmentation and persona creation</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>using the k-means algorithm.</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>Shorter excerpt available on <span class="co">[</span><span class="ot">Medium</span><span class="co">](ttps://clfo2014.medium.com/using-customer-segmentation-to-create-customer-personas-34366a5f5925)</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>these steps;</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Data Collection and Integration: Gather customer data from various sources, including transaction</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>records, demographic information, and customer interactions.</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Preprocessing and Feature Selection: Cleanse and preprocess the data, selecting relevant features for</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>analysis, such as transaction frequency, average balance, age, and customer preferences.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>K-Means Clustering: Apply the k-means algorithm to segment customers based on similar behavioral</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>patterns. Determine the optimal number of clusters and assign customers to their </span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>respective segments.</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Persona Creation: Develop personas for each customer segment, incorporating demographic </span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>information, behaviors, preferences, and goals. These personas should be representative of the segment’s</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>characteristics and serve as a guide for targeted marketing strategies.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Implementation and Iteration: Implement personalized marketing campaigns and track the </span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>performance of the tailored strategies. Continuously evaluate and refine the segments and personas based</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>on customer feedback and evolving market dynamics.</span>
 <span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>::: </span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>The following pages, walk through a detailed case study of customer segmentation and persona creation</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>using the k-means algorithm.</span>
 <span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Introduction__</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>In today's competitive marketplace, financial institutions must focus on developing effective strategies </span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>to attract and retain customers. One key approach to customer targeting is customer segmentation, which involves dividing a customer base into groups based on shared characteristics or needs. By understanding the unique needs and preferences of different customer segments, financial institutions can tailor their marketing efforts, product offerings, and customer service to better meet the expectations of each group. This analysis will explore how to use customer data to segment customers in the banking and credit card industry and provide insights on how financial institutions can effectively segment their customer base to drive growth, profitability and create a win-win strategy for themselves and their customers. </span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>Shorter excerpt available on <span class="co">[</span><span class="ot">Medium</span><span class="co">](ttps://clfo2014.medium.com/using-customer-segmentation-to-create-customer-personas-34366a5f5925)</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>::: </span>
 <span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>Creating a win-win strategy for any business and its customers is crucial for maintaining a long-term, mutually beneficial relationship. In today's marketplace, customers have more choices than ever before, and they are more empowered to switch to a competitor if they feel that their needs are not being met. Therefore, it is in the best interest of financial institutions to ensure that their customers feel satisfied and valued. By creating a win-win strategy, financial institutions can achieve their business objectives while also addressing the needs and preferences of their customers. This can result in increased customer loyalty, higher retention rates, and ultimately, greater profitability for the business. Additionally, a win-win strategy can help to foster a positive reputation and brand image, which can attract new customers and enhance the overall success of the organization. What does a win-win strategy for financial institutions look like?</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Providing personalized services: This can create a win-win situation by offering customized products and services that cater to the specific needs of individual customers. For example, offering credit cards with rewards and benefits that are tailored to a customer's spending habits and preferences.</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Maintaining transparency: It is important for financial institutions to be transparent about their policies, fees, and charges. This can help to build trust and confidence with customers and ensure that they feel valued and respected.</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Introduction__</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>In today's competitive marketplace, financial institutions must focus on developing effective strategies </span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>to attract and retain customers. One key approach to customer targeting is customer segmentation, which involves dividing a customer base into groups based on shared characteristics or needs. By understanding the unique needs and preferences of different customer segments, financial institutions can tailor their marketing efforts, product offerings, and customer service to better meet the expectations of each group. This analysis will explore how to use customer data to segment customers in the banking and credit card industry and provide insights on how financial institutions can effectively segment their customer base to drive growth, profitability and create a win-win strategy for themselves and their customers. </span>
 <span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Offering competitive rates and terms: Financial institutions can attract and retain customers by offering competitive rates and terms on their products and services. This can help to ensure that customers feel that they are getting good value for their money.</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>Creating a win-win strategy for any business and its customers is crucial for maintaining a long-term, mutually beneficial relationship. In today's marketplace, customers have more choices than ever before, and they are more empowered to switch to a competitor if they feel that their needs are not being met. Therefore, it is in the best interest of financial institutions to ensure that their customers feel satisfied and valued. By creating a win-win strategy, financial institutions can achieve their business objectives while also addressing the needs and preferences of their customers. This can result in increased customer loyalty, higher retention rates, and ultimately, greater profitability for the business. Additionally, a win-win strategy can help to foster a positive reputation and brand image, which can attract new customers and enhance the overall success of the organization. What does a win-win strategy for financial institutions look like?</span>
 <span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Providing excellent customer service: Customer service is a key factor in creating a win-win strategy. Financial institutions that provide excellent customer service can differentiate themselves from competitors and build strong relationships with their customers.</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Providing personalized services: This can create a win-win situation by offering customized products and services that cater to the specific needs of individual customers. For example, offering credit cards with rewards and benefits that are tailored to a customer's spending habits and preferences.</span>
 <span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>In general, a win-win strategy must ensure that customers are able to get access to</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>the credit they need at reasonable terms and conditions to reduce their risk of </span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>default, which in turn reduces the risk to the financial institutions.</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Maintaining transparency: It is important for financial institutions to be transparent about their policies, fees, and charges. This can help to build trust and confidence with customers and ensure that they feel valued and respected.</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Offering competitive rates and terms: Financial institutions can attract and retain customers by offering competitive rates and terms on their products and services. This can help to ensure that customers feel that they are getting good value for their money.</span>
 <span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Analysis Approach__</span></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>The analysis approach involves several steps, starting with explanatory data analysis </span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>to gain insights into the data. Next, the k-means algorithm is used to identify clusters </span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>in the data based on shared characteristics of customers. The UMAP algorithm is then used </span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>to plot the clusters in two dimension, making it easier to visualize the clusters. </span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>The analysis of the clusters is then performed to understand the unique characteristics and </span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>needs of each group and then create customer personas. Finally, based on the insights gained, </span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>recommendations on product offerings are made to address the needs of each cluster/persona and </span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>improve the overall customer experience. This approach can be used in a variety of industries </span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>to better understand customer behavior and tailor services and products to meet their needs.</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>__Note:__ All analysis are performed using the R programming language.</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Data Understanding__</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Providing excellent customer service: Customer service is a key factor in creating a win-win strategy. Financial institutions that provide excellent customer service can differentiate themselves from competitors and build strong relationships with their customers.</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>In general, a win-win strategy must ensure that customers are able to get access to</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>the credit they need at reasonable terms and conditions to reduce their risk of </span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>default, which in turn reduces the risk to the financial institutions.</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Analysis Approach__</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>The analysis approach involves several steps, starting with explanatory data analysis </span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>to gain insights into the data. Next, the k-means algorithm is used to identify clusters </span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>in the data based on shared characteristics of customers. The UMAP algorithm is then used </span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>to plot the clusters in two dimension, making it easier to visualize the clusters. </span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>The analysis of the clusters is then performed to understand the unique characteristics and </span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>needs of each group and then create customer personas. Finally, based on the insights gained, </span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>recommendations on product offerings are made to address the needs of each cluster/persona and </span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>improve the overall customer experience. This approach can be used in a variety of industries </span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>to better understand customer behavior and tailor services and products to meet their needs.</span>
 <span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>The dataset used in this is part of the resource files for the Udemy course</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Data Science for Business</span><span class="co">](https://www.udemy.com/course/data-science-for-business-6-real-world-case-studies/)</span>. See data descriptions below - </span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CUST_ID**: Identification of credit card holder.</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**BALANCE**:  Balance amount  left in customer's account to make purchases.</span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**BALANCE_FREQUENCY**: How frequently the Balance is updated, score between 0 and 1.</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>__Note:__ All analysis are performed using the R programming language.</span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Data Understanding__</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>The dataset used in this is part of the resource files for the Udemy course</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Data Science for Business</span><span class="co">](https://www.udemy.com/course/data-science-for-business-6-real-world-case-studies/)</span>. See data descriptions below - </span>
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PURCHASES**: Amount of purchases made from account.</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CUST_ID**: Identification of credit card holder.</span>
 <span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**ONEOFFPURCHASES**: Maximum purchase amount done in one-go.</span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**BALANCE**:  Balance amount  left in customer's account to make purchases.</span>
 <span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**INSTALLMENTS_PURCHASES**: Amount of purchase done in installment.</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**BALANCE_FREQUENCY**: How frequently the Balance is updated, score between 0 and 1.</span>
 <span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CASH_ADVANCE**: Cash in advance given by the user.</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PURCHASES**: Amount of purchases made from account.</span>
 <span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PURCHASES_FREQUENCY**: Frequency of purchases, score between 0 and 1.</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**ONEOFFPURCHASES**: Maximum purchase amount done in one-go.</span>
 <span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**ONEOFF_PURCHASES_FREQUENCY**: Frequency of purchases in one-go.</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**INSTALLMENTS_PURCHASES**: Amount of purchase done in installment.</span>
 <span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PURCHASES_INSTALLMENTS_FREQUENCY**: Frequency of purchases in installments.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CASH_ADVANCE**: Cash in advance given by the user.</span>
 <span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CASH_ADVANCE_FREQUENCY**: Frequency of cash advance payments.</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PURCHASES_FREQUENCY**: Frequency of purchases, score between 0 and 1.</span>
 <span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CASH_ADVANCE_TRX**: Number of Transactions made with "Cash in Advance".</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**ONEOFF_PURCHASES_FREQUENCY**: Frequency of purchases in one-go.</span>
 <span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PURCHASES_TRX**: Number of purchase transactions made.</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PURCHASES_INSTALLMENTS_FREQUENCY**: Frequency of purchases in installments.</span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CREDIT_LIMIT**: Limit of Credit Card for customer.</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CASH_ADVANCE_FREQUENCY**: Frequency of cash advance payments.</span>
 <span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PAYMENTS**: Amount of Payment done by customer.</span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CASH_ADVANCE_TRX**: Number of Transactions made with "Cash in Advance".</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**MINIMUM_PAYMENTS**: Minimum amount of payments made by customer.  </span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PURCHASES_TRX**: Number of purchase transactions made.</span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PRC_FULL_PAYMENT**: Percent of full payment paid by customer.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**CREDIT_LIMIT**: Limit of Credit Card for customer.</span>
 <span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**TENURE**: Tenure of credit card service for customer.</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PAYMENTS**: Amount of Payment done by customer.</span>
 <span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>A few things to note on the dataset - </span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**MINIMUM_PAYMENTS**: Minimum amount of payments made by customer.  </span>
 <span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>For features with values between 0 and 1, values closer to 1 mean it happens frequently</span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>while values close to 0 means it happens less frequently.</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>For this analysis, I'll be making the assumption that *tenure* is in months, since this</span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>is not stated explicitly. </span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**PRC_FULL_PAYMENT**: Percent of full payment paid by customer.</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**TENURE**: Tenure of credit card service for customer.</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>A few things to note on the dataset - </span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Exploratory Data Analysis__</span></span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>The <span class="in">`skim()`</span> function from the <span class="co">[</span><span class="ot">`skimr`</span><span class="co">](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html)</span> package </span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>can be used to get an overview of features in the dataset. </span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/skim.png)</span>{width=90% fig-align=center}</span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>For features with values between 0 and 1, values closer to 1 mean it happens frequently</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>while values close to 0 means it happens less frequently.</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>For this analysis, I'll be making the assumption that *tenure* is in months, since this</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>is not stated explicitly. </span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Exploratory Data Analysis__</span></span>
 <span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>__Observations:__</span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Missing Values - Dataset is complete except for 313 null values in *minimum_payments* and </span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>1 missing value in *credit_limit*.</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The dataset contains only numeric values. </span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Although the output from the <span class="in">`skim()`</span> function does not show it here, all the features</span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>in the dataset are highly left or right skewed, with the exception of *purchases_frequency*</span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>that appears to have a bi-modal distribution. We can get a sense of this by observing</span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>the values for the mean and median (p50) in the <span class="in">`skim()`</span> output. the large variance</span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>between those values indicates highly skewed features.</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>The <span class="in">`skim()`</span> function from the <span class="co">[</span><span class="ot">`skimr`</span><span class="co">](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html)</span> package </span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>can be used to get an overview of features in the dataset. </span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/skim.png)</span>{width=90% fig-align=center}</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a>__Observations:__</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Missing Values - Dataset is complete except for 313 null values in *minimum_payments* and </span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>1 missing value in *credit_limit*.</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The dataset contains only numeric values. </span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>To further illustrate the skewness, we can plot histograms of all numeric features;</span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/00_histogram_feature_values.png)</span>{width=90% fig-align="center"}</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Although the output from the <span class="in">`skim()`</span> function does not show it here, all the features</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>in the dataset are highly left or right skewed, with the exception of *purchases_frequency*</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>that appears to have a bi-modal distribution. We can get a sense of this by observing</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>the values for the mean and median (p50) in the <span class="in">`skim()`</span> output. the large variance</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>between those values indicates highly skewed features.</span>
 <span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>While there are many features to explore in the dataset, one that I am particularly interested </span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>in is the **credit card utilization**. While not explicitly shown in the dataset, we </span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>can easily add this feature by dividing the *balance* by *credit_limit*. </span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>To further illustrate the skewness, we can plot histograms of all numeric features;</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/00_histogram_feature_values.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>**What is Credit Utilization**. Credit Utilization is a measure of how much of a customer's</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>available credit is currently being utilized. It is calculated by dividing the amount of</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>credit the customer is currently using by their total available credit limit. Credit utilization</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>is an important factor for banks and credit card companies because it is one of the </span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>key metrics used to assess a borrower's credit worthiness. High levels of credit utilization</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>can indicate that the customer may be struggling to manage their credit debt and may be</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>at higher risk of defaulting on their payments. On the flip side, customers with low levels</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>of credit utilization are generally viewed as lower risk and may be more likely to be approved</span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>for new credit or offered more favorable terms. </span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>What does credit utilization look like for customers in this dataset. Below I plot histograms </span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>for customers who's credit utilization is above 100% (meaning their current balance is higher then their</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>credit limit) and customers who's credit utilization is below 100% (meaning their balance is </span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>currently lower than their credit limit). </span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/01_credit_utilization_histogram.png)</span>{width=90% fig-align="center"}</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>**Observations:**</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>2.6% of customers have credit utilization above 100%. These customers would be considered</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>extremely risky and have high chances of defaulting on their payments. </span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A general threshold for healthy credit utilization is 30% or below. This would mean</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>about half (51%) of customers in this dataset are above the healthy threshold. </span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>While there are many features to explore in the dataset, one that I am particularly interested </span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>in is the **credit card utilization**. While not explicitly shown in the dataset, we </span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>can easily add this feature by dividing the *balance* by *credit_limit*. </span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>**What is Credit Utilization**. Credit Utilization is a measure of how much of a customer's</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>available credit is currently being utilized. It is calculated by dividing the amount of</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>credit the customer is currently using by their total available credit limit. Credit utilization</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>is an important factor for banks and credit card companies because it is one of the </span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>key metrics used to assess a borrower's credit worthiness. High levels of credit utilization</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>can indicate that the customer may be struggling to manage their credit debt and may be</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>at higher risk of defaulting on their payments. On the flip side, customers with low levels</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>of credit utilization are generally viewed as lower risk and may be more likely to be approved</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>for new credit or offered more favorable terms. </span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>What does credit utilization look like for customers in this dataset. Below I plot histograms </span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>for customers who's credit utilization is above 100% (meaning their current balance is higher then their</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>credit limit) and customers who's credit utilization is below 100% (meaning their balance is </span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>currently lower than their credit limit). </span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/01_credit_utilization_histogram.png)</span>{width=90% fig-align="center"}</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>**Observations:**</span>
 <span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>There are several ways financial institutions can address customers with high levels of credit</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>utilization. We'll explore some of these ideas later on. </span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>2.6% of customers have credit utilization above 100%. These customers would be considered</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>extremely risky and have high chances of defaulting on their payments. </span>
 <span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>Reproducible code available on <span class="co">[</span><span class="ot">Github</span><span class="co">](https://github.com/LucasO21/analysis_projects.R/tree/master/02_customer_segmentation_banking)</span></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>A general threshold for healthy credit utilization is 30% or below. This would mean</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>about half (51%) of customers in this dataset are above the healthy threshold. </span>
 <span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>::: </span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>--- </span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>What other insights can we draw from this dataset before exploring the k-means algorithm. </span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>We just saw the distribution of *credit_utilization.* Another way we may want to segment</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>customers is by looking at *cash_advance.* Given the high credit utilization we saw for </span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>some customers, it is obvious that some customers might be using their credit cards as a</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>means to take out loans. The plot below shows average *cash_advance* for 3 cohorts of </span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>customers taking out cash advances. Low = less than $1000, Medium = $1001 - $5000, High = above $5000.</span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/02_cash_advance_customers.png)</span>{width=90% fig-align="center"}</span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>**Observations:**</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The average *cash_advance* plotted above are for customers with 0 *purchases* on their </span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>credit cards. We can see certain customers with *cash_advance* upwards of $10,000. The max *cash_advance* </span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>for a customer is $47,000. These customers appear to be using their credit card as means to take out loans for other purposes. Cash advances are generally considered bad financial practice for several reasons including high fees, high interest rates and negative impact on credit scores. Financial institutions may need to target these customers with better financial products, perhaps low interest loans. We'll explore this later on. </span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>There are several ways financial institutions can address customers with high levels of credit</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>utilization. We'll explore some of these ideas later on. </span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>Reproducible code available on <span class="co">[</span><span class="ot">Github</span><span class="co">](https://github.com/LucasO21/analysis_projects.R/tree/master/02_customer_segmentation_banking)</span></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>::: </span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>--- </span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>What other insights can we draw from this dataset before exploring the k-means algorithm. </span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>We just saw the distribution of *credit_utilization.* Another way we may want to segment</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>customers is by looking at *cash_advance.* Given the high credit utilization we saw for </span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>some customers, it is obvious that some customers might be using their credit cards as a</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>means to take out loans. The plot below shows average *cash_advance* for 3 cohorts of </span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>customers taking out cash advances. Low = less than $1000, Medium = $1001 - $5000, High = above $5000.</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/02_cash_advance_customers.png)</span>{width=90% fig-align="center"}</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>**Observations:**</span>
 <span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>Another way we might want to segment customers is looking at *purchases* and *balance*</span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>to understand the spending habits of customers. In the plot below, we can see the </span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>distribution of *purchases* and *balance* for customers who have spent at least $100 on purchases - </span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/03_purchase_balance_histogram.png)</span>{width=90% fig-align="center"}</span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>We notice a fairly wide distribution of *purchases* and *balance.* We can look deeper </span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>and categorize customers into high/low purchase and balance cohorts based on median values.</span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>The plot below shows that categorization. Note that data used in the plot is filtered</span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>for customers with 0 *cash_advance*. We want to ensure that we are excluding the customers</span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>who are potentially using their credit cards for taking out loans;</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>The average *cash_advance* plotted above are for customers with 0 *purchases* on their </span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>credit cards. We can see certain customers with *cash_advance* upwards of $10,000. The max *cash_advance* </span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>for a customer is $47,000. These customers appear to be using their credit card as means to take out loans for other purposes. Cash advances are generally considered bad financial practice for several reasons including high fees, high interest rates and negative impact on credit scores. Financial institutions may need to target these customers with better financial products, perhaps low interest loans. We'll explore this later on. </span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>Another way we might want to segment customers is looking at *purchases* and *balance*</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>to understand the spending habits of customers. In the plot below, we can see the </span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>distribution of *purchases* and *balance* for customers who have spent at least $100 on purchases - </span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/03_purchase_balance_histogram.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/04_purchase_balance_cohorts.png)</span>{width=90% fig-align="center"}</span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>**Observation:** We can observe the behaviors of the 4 cohorts:</span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>High Purchase / High Balance - These customers are potentially using their credit card</span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>for all of their purchases to perhaps accumulate points, and are maintaining a high balance.</span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Low Purchase / High Balance - These customers are potentially making some high value </span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>purchases on their credit card and are taking time to payoff the balance. </span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>We notice a fairly wide distribution of *purchases* and *balance.* We can look deeper </span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>and categorize customers into high/low purchase and balance cohorts based on median values.</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>The plot below shows that categorization. Note that data used in the plot is filtered</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>for customers with 0 *cash_advance*. We want to ensure that we are excluding the customers</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>who are potentially using their credit cards for taking out loans;</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/04_purchase_balance_cohorts.png)</span>{width=90% fig-align="center"}</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>**Observation:** We can observe the behaviors of the 4 cohorts:</span>
 <span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>High Purchase / Low Balance - These customers are potentially making frequent purchases</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>with their credit card but are paying off the balance immediately. </span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>High Purchase / High Balance - These customers are potentially using their credit card</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>for all of their purchases to perhaps accumulate points, and are maintaining a high balance.</span>
 <span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Low Purchase / Low Balance - These customers are potentially making very few purchases</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>and paying off the balance immediately. These could be young customers looking to build </span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>their credit. </span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>Based on this, the bank could design financial products these groups of customers. For example</span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>for those with high purchases/high balance, the bank could offer high credit limits to ensure</span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>their credit utilization stays low. The bank could also offer lower annual fees or balance transfer</span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>options. For customers in the low purchase/low balance cohort, the bank could offer more cash back,</span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>points based rewards and lower interest rates, to encourage them to use their credit card more. </span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Low Purchase / High Balance - These customers are potentially making some high value </span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>purchases on their credit card and are taking time to payoff the balance. </span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>High Purchase / Low Balance - These customers are potentially making frequent purchases</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>with their credit card but are paying off the balance immediately. </span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Low Purchase / Low Balance - These customers are potentially making very few purchases</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>and paying off the balance immediately. These could be young customers looking to build </span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>their credit. </span>
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>We have used explanatory data analysis to understand characteristics about customers</span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>and get ideas of how we could segment customers. This initial step will help to shed </span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>light on how a k-means algorithm may cluster customers later on in the project. </span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>Based on this, the bank could design financial products these groups of customers. For example</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>for those with high purchases/high balance, the bank could offer high credit limits to ensure</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>their credit utilization stays low. The bank could also offer lower annual fees or balance transfer</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>options. For customers in the low purchase/low balance cohort, the bank could offer more cash back,</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>points based rewards and lower interest rates, to encourage them to use their credit card more. </span>
 <span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="fu"># __K-Means Algorithm__</span></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">K-Means</span><span class="co">](https://en.wikipedia.org/wiki/K-means_clustering)</span> algorithm is a popular unsupervised </span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>machine learning technique used for clustering data. The algorithm works by dividing a set of </span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>data points into *k* clusters based on their similarity. Initially, *k* centroids are chosen</span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>randomly from the data points, and each data point is assigned </span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>to the nearest centroid. Then, the centroids are moved to the center of their respective clusters, </span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>and the data points are re-assigned to the nearest centroid. This process is repeated until the </span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>centroids no longer move or a maximum number of iterations is reached.</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/kmeans_before_after.png)</span>{width=90% fig-align="center"}</span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>The k-means algorithm is widely used in various applications, such as customer segmentation, </span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>and anomaly detection. To learn more about the k-means algorithm, you can read up on the </span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>following sources:</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>We have used explanatory data analysis to understand characteristics about customers</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>and get ideas of how we could segment customers. This initial step will help to shed </span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>light on how a k-means algorithm may cluster customers later on in the project. </span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="fu"># __K-Means Algorithm__</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">K-Means</span><span class="co">](https://en.wikipedia.org/wiki/K-means_clustering)</span> algorithm is a popular unsupervised </span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>machine learning technique used for clustering data. The algorithm works by dividing a set of </span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>data points into *k* clusters based on their similarity. Initially, *k* centroids are chosen</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>randomly from the data points, and each data point is assigned </span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>to the nearest centroid. Then, the centroids are moved to the center of their respective clusters, </span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>and the data points are re-assigned to the nearest centroid. This process is repeated until the </span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>centroids no longer move or a maximum number of iterations is reached.</span>
 <span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">K-Means Clustering</span><span class="co">](https://en.wikipedia.org/wiki/K-means_clustering)</span>.</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/kmeans_before_after.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Benefits &amp; challenges of k-means for customer segmentation</span><span class="co">](https://www.linkedin.com/advice/3/what-benefits-challenges-using-k-means-clustering)</span></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">How to use k-means clustering for customer segmentation</span><span class="co">](https://practicaldatascience.co.uk/machine-learning/how-to-use-k-means-clustering-for-customer-segmentation)</span></span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>The k-means algorithm is widely used in various applications, such as customer segmentation, </span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>and anomaly detection. To learn more about the k-means algorithm, you can read up on the </span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>following sources:</span>
 <span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>Before proceeding with k-means clustering, I decided to filter the dataset down to a particular</span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>cohort of customers, in order to ease computational time and ease of analyzing/visualizing clusters. I'll be picking</span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>customers with *tenure* at 10 months for my analysis cohort. This cohort has 236 customers</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a>and makes up 2.6% of the dataset. </span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>Reproducible code available on <span class="co">[</span><span class="ot">Github</span><span class="co">](https://github.com/LucasO21/analysis_projects.R/tree/master/02_customer_segmentation_banking)</span></span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>::: </span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">K-Means Clustering</span><span class="co">](https://en.wikipedia.org/wiki/K-means_clustering)</span>.</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Benefits &amp; challenges of k-means for customer segmentation</span><span class="co">](https://www.linkedin.com/advice/3/what-benefits-challenges-using-k-means-clustering)</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">How to use k-means clustering for customer segmentation</span><span class="co">](https://practicaldatascience.co.uk/machine-learning/how-to-use-k-means-clustering-for-customer-segmentation)</span></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>Before proceeding with k-means clustering, I decided to filter the dataset down to a particular</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>cohort of customers, in order to ease computational time and ease of analyzing/visualizing clusters. I'll be picking</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>customers with *tenure* at 10 months for my analysis cohort. This cohort has 236 customers</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>and makes up 2.6% of the dataset. </span>
 <span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a><span class="fu">## __Data Prep__</span></span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>To prepare the dataset for k-means clustering, I performed the following steps:</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Create an analysis cohort by filtering for customers with *tenure* = 10.</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>::: callout-note</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>Reproducible code available on <span class="co">[</span><span class="ot">Github</span><span class="co">](https://github.com/LucasO21/analysis_projects.R/tree/master/02_customer_segmentation_banking)</span></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>::: </span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Drop any rows with null values. This leaves an analysis cohort of 226 customers. </span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a><span class="fu">## __Data Prep__</span></span>
 <span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Create a *credit_utilization* feature by dividing *balance* by *credit_limit*.</span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>To prepare the dataset for k-means clustering, I performed the following steps:</span>
 <span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a><span class="fu">## __Feature Engineering__</span></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>Feature engineering is an important step in preparing data for k-means clustering. I used</span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>the following techniques for feature engineering in order to improve the accuracy and</span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>effectiveness of the algorithm:</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Create an analysis cohort by filtering for customers with *tenure* = 10.</span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Drop any rows with null values. This leaves an analysis cohort of 226 customers. </span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Create a *credit_utilization* feature by dividing *balance* by *credit_limit*.</span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Remove unwanted features - Remove the *cust_id* column. This is not needed for k-means</span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>and is used only as a customer identifier. I also make the executive decision to remove</span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>the *installment_purchases* column. This feature is defined as the "amount of purchases done </span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>in installments". I would assume that *purchases* is the important feature in this dataset</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>and regardless of the number of purchase installments. </span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a><span class="fu">## __Feature Engineering__</span></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>Feature engineering is an important step in preparing data for k-means clustering. I used</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>the following techniques for feature engineering in order to improve the accuracy and</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>effectiveness of the algorithm:</span>
 <span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Normalization - This step scales each feature to have a mean of zero and standard</span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>deviation of one. This helps prevent features with larger values from dominating the clustering</span>
-<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>results. </span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Dimensionality Reduction (PCA) - Reducing the dimensionality of the data can reduce</span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>the computational complexity and improve the interpretability of the clustering results. A </span>
-<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>popular dimensionality reduction technique is called PCA (Principal Component Analysis). PCA works </span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>by identifying a smaller number of variables, known as principal components, that can explain the </span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>maximum amount of variance in the original dataset. These principal components are linear combinations </span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>of the original variables, and each one represents a different direction in the data. The first </span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>principal component captures the most variance in the data, while each subsequent component captures as </span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>much of the remaining variance as possible. For a video explanation of how PCA works, see</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">this</span><span class="co">](https://www.youtube.com/watch?v=FgakZw6K1QQ)</span> link. </span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>Setting a PCA threshold of 80%, meaning generating enough components to capture 80%</span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>of the variability in the features, PCA identified 5 principal components from 16 features.</span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>See sample below;</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/pca_data_sample.png)</span>{width=70% fig-align="center"}</span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Remove unwanted features - Remove the *cust_id* column. This is not needed for k-means</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>and is used only as a customer identifier. I also make the executive decision to remove</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>the *installment_purchases* column. This feature is defined as the "amount of purchases done </span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>in installments". I would assume that *purchases* is the important feature in this dataset</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>and regardless of the number of purchase installments. </span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Normalization - This step scales each feature to have a mean of zero and standard</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>deviation of one. This helps prevent features with larger values from dominating the clustering</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>results. </span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Dimensionality Reduction (PCA) - Reducing the dimensionality of the data can reduce</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>the computational complexity and improve the interpretability of the clustering results. A </span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>popular dimensionality reduction technique is called PCA (Principal Component Analysis). PCA works </span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>by identifying a smaller number of variables, known as principal components, that can explain the </span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>maximum amount of variance in the original dataset. These principal components are linear combinations </span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>of the original variables, and each one represents a different direction in the data. The first </span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>principal component captures the most variance in the data, while each subsequent component captures as </span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>much of the remaining variance as possible. For a video explanation of how PCA works, see</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">this</span><span class="co">](https://www.youtube.com/watch?v=FgakZw6K1QQ)</span> link. </span>
 <span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a><span class="fu">## __Optimal Number of Clusters__</span></span>
-<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>To determine the optimal number of clusters, we can use a **Skree Plot**. A <span class="co">[</span><span class="ot">skree plot</span><span class="co">](https://en.wikipedia.org/wiki/Scree_plot)</span> is </span>
-<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>used to determine the appropriate number of clusters to use in a k-means clustering</span>
-<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>analysis. The skree plot displays the within-cluster sum of squares (WCSS) on the y-axis,</span>
-<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>plotted against the number of clusters on the x-axis. </span>
-<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>The within-cluster sum of squares measures the total squared distance between each point and it's</span>
-<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>assigned cluster center, summed over all clusters.  The scree plot helps identify the **elbow point**,</span>
-<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>or the point on the plot where adding more clusters does not significantly improve the clustering </span>
-<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>performance, i.e., the WCSS is not significantly reduced by adding more clusters.</span>
-<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>The elbow point is typically used as a guide for deciding how many clusters to retain in the analysis. </span>
-<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>However, there is no hard and fast rule for selecting the number of clusters, this can be</span>
-<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>based on domain knowledge and knowledge about the dataset. The plot below is the skree plot </span>
-<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>for our analysis cohort;</span>
-<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a>Setting a PCA threshold of 80%, meaning generating enough components to capture 80%</span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>of the variability in the features, PCA identified 5 principal components from 16 features.</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>See sample below;</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/pca_data_sample.png)</span>{width=70% fig-align="center"}</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a><span class="fu">## __Optimal Number of Clusters__</span></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>To determine the optimal number of clusters, we can use a **Skree Plot**. A <span class="co">[</span><span class="ot">skree plot</span><span class="co">](https://en.wikipedia.org/wiki/Scree_plot)</span> is </span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>used to determine the appropriate number of clusters to use in a k-means clustering</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>analysis. The skree plot displays the within-cluster sum of squares (WCSS) on the y-axis,</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>plotted against the number of clusters on the x-axis. </span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>The within-cluster sum of squares measures the total squared distance between each point and it's</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a>assigned cluster center, summed over all clusters.  The scree plot helps identify the **elbow point**,</span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>or the point on the plot where adding more clusters does not significantly improve the clustering </span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>performance, i.e., the WCSS is not significantly reduced by adding more clusters.</span>
 <span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/04_skree_plot.png)</span>{width=90% fig-align="center"}</span>
-<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>**Observation:** We can see that the elbow point appears to be 5 clusters. However after</span>
-<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>running the first iteration of the k-means algorithm, I noticed that only 1 customer (*cust_id* C11004)</span>
-<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a>was being assigned to cluster 1. I would assume that this customer has certain characteristics</span>
-<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>that stand out for the rest of the cohort. For this particular analysis, I just decided to </span>
-<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>exclude this customer and re-cluster again, using 4 clusters. </span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>The elbow point is typically used as a guide for deciding how many clusters to retain in the analysis. </span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>However, there is no hard and fast rule for selecting the number of clusters, this can be</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a>based on domain knowledge and knowledge about the dataset. The plot below is the skree plot </span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>for our analysis cohort;</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/04_skree_plot.png)</span>{width=90% fig-align="center"}</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Visualizing Clusters__</span></span>
-<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">UMAP</span><span class="co">](https://zzz.bwh.harvard.edu/luna/vignettes/nsrr-umap/)</span> (Uniform Manifold Approximation &amp; Projection) is a machine learning technique for dimensionality</span>
-<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>reduction and data visualization. In order to visualize the cluster assignments, I used UMAP for the sole purpose of generating *x* and *y* axis coordinates for visualizing clusters. Recall our dataset for k-means</span>
-<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>was reduced to 5 principal components. I wanted to still be able to visualize the clusters</span>
-<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>in 2 dimensions. </span>
-<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>The plot below shows our cluster assignments from the k-means algorithm;</span>
-<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/05_cluster_viz.png)</span>{width=90% fig-align="center"}</span>
-<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>**Observation:** Although not perfect, the k-means algorithm does a decent job of segmenting customers. We can see 4 distinct segments with a few customers that should probably be re-clustered, although a 3 dimensional plot may present a different perspective.</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>**Observation:** We can see that the elbow point appears to be 5 clusters. However after</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>running the first iteration of the k-means algorithm, I noticed that only 1 customer (*cust_id* C11004)</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>was being assigned to cluster 1. I would assume that this customer has certain characteristics</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>that stand out for the rest of the cohort. For this particular analysis, I just decided to </span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>exclude this customer and re-cluster again, using 4 clusters. </span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Visualizing Clusters__</span></span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">UMAP</span><span class="co">](https://zzz.bwh.harvard.edu/luna/vignettes/nsrr-umap/)</span> (Uniform Manifold Approximation &amp; Projection) is a machine learning technique for dimensionality</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>reduction and data visualization. In order to visualize the cluster assignments, I used UMAP for the sole purpose of generating *x* and *y* axis coordinates for visualizing clusters. Recall our dataset for k-means</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a>was reduced to 5 principal components. I wanted to still be able to visualize the clusters</span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>in 2 dimensions. </span>
 <span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a>The plot below shows our cluster assignments from the k-means algorithm;</span>
 <span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Cluster Analysis__</span></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/05_cluster_viz.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>Now that we have our clusters of customers, we can begin analyzing these clusters to </span>
-<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>understand trends in customer characteristics of the different clusters. Note that we</span>
-<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>have already seen some of these trends during the explanatory data analysis phase, thus</span>
-<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>we can better understand how the k-means algorithm is working. To start, we can plot</span>
-<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>the distribution of some features of interest by cluster using boxplots. Let's start</span>
-<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>by plotting the distribution of *balance*, *cash_advance*, *credit_utilization* and *purchases*.</span>
-<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/06_feature_dist_by_cluster_1.png)</span>{width=90% fig-align="center"}</span>
-<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>***Observation:*** Looking at the plot above, 2 distinct clusters stand out at first glance, cluster 4 and cluster 2: </span>
-<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 4:__ Include customers with high *balance*, *cash_advance* and *credit_utilization*. However,</span>
-<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>these customers have very low *purchases*. As we outlined earlier, these are customers that appear</span>
-<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>to be using their credit cards as a means to take out loans. </span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>**Observation:** Although not perfect, the k-means algorithm does a decent job of segmenting customers. We can see 4 distinct segments with a few customers that should probably be re-clustered, although a 3 dimensional plot may present a different perspective.</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Cluster Analysis__</span></span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>Now that we have our clusters of customers, we can begin analyzing these clusters to </span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>understand trends in customer characteristics of the different clusters. Note that we</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>have already seen some of these trends during the explanatory data analysis phase, thus</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>we can better understand how the k-means algorithm is working. To start, we can plot</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>the distribution of some features of interest by cluster using boxplots. Let's start</span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>by plotting the distribution of *balance*, *cash_advance*, *credit_utilization* and *purchases*.</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/06_feature_dist_by_cluster_1.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 2:__ Includes customers with high *credit_utilization*, slightly high *balance* and high *purchases.*</span>
-<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>These customers appear to be using their credits strictly for making purchases, and tend to pay</span>
-<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>off the balance frequently. </span>
-<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 3:__ These customers have lower values for all these features. However we know that</span>
-<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>this analysis cohort includes customers with *tenure* of 10 months, so these customers have had</span>
-<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>their credit cards for a while. This clusters appears to include customers who are cautious</span>
-<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>about using their credit cards and tend to make some low value purchases.</span>
-<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 1:__ These customers are similar to those in cluster 2, however they tend to </span>
-<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>have higher credit utilization. These customers appear to have much lower *credit_limit* (median of $2,500) </span>
-<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>compared to cluster 1 ($5,000) and cluster 3 ($3,500). Cluster 2 has the lowest median *credit_limit* ($1,350).</span>
-<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>Let us take a look at a few other feature distributions for our clusters. Below I show</span>
-<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>boxplots for *credit_limit*, *minimum_payments*, *payments* and *purchase_trx* for each cluster. </span>
-<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/07_feature_dist_by_cluster_2.png)</span>{width=90% fig-align="center"}</span>
-<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>**Observation:** Once again we can gleam a  few insights:</span>
-<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 4:__ Appears to have higher *credit_limit* and also, customers in this cluster</span>
-<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>tend to make make higher minimum payments, suggesting that some of these customers (who are using</span>
-<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>their credit cards to take out loans) are indeed making efforts to pay off their balance. </span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>***Observation:*** Looking at the plot above, 2 distinct clusters stand out at first glance, cluster 4 and cluster 2: </span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 4:__ Include customers with high *balance*, *cash_advance* and *credit_utilization*. However,</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>these customers have very low *purchases*. As we outlined earlier, these are customers that appear</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a>to be using their credit cards as a means to take out loans. </span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 2:__ Includes customers with high *credit_utilization*, slightly high *balance* and high *purchases.*</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>These customers appear to be using their credits strictly for making purchases, and tend to pay</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>off the balance frequently. </span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 3:__ These customers have lower values for all these features. However we know that</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>this analysis cohort includes customers with *tenure* of 10 months, so these customers have had</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a>their credit cards for a while. This clusters appears to include customers who are cautious</span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>about using their credit cards and tend to make some low value purchases.</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 1:__ These customers are similar to those in cluster 2, however they tend to </span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>have higher credit utilization. These customers appear to have much lower *credit_limit* (median of $2,500) </span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>compared to cluster 1 ($5,000) and cluster 3 ($3,500). Cluster 2 has the lowest median *credit_limit* ($1,350).</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>Let us take a look at a few other feature distributions for our clusters. Below I show</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>boxplots for *credit_limit*, *minimum_payments*, *payments* and *purchase_trx* for each cluster. </span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/07_feature_dist_by_cluster_2.png)</span>{width=90% fig-align="center"}</span>
 <span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 2:__ These customers have high the highest *purchase_trx* but also have *payments*,  </span>
-<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>*minimum_payment*, *credit_limit* and similar to clusters 1 and 4. These customers while making</span>
-<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>frequent purchases with their credit tend to pay just the minimum required payments and thus</span>
-<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>always maintain some balance on their credit card. </span>
-<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Clusters 1 and 3:__ These customers appear to have similar characteristics and maintain low</span>
-<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a>levels of use for their credit cards. </span>
-<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Customer Persona / Product Recommendations__</span></span>
-<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>Based on the analysis in the previous section. We can thus create customer personas</span>
-<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>and come up with product recommendations to be marketed to these customers. We'll do this</span>
-<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>using the following format; ***Cluster***, ***Persona Name***, ***Description***, ***Stats***, </span>
-<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>***Product Recommendations***.</span>
-<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>__Cluster 4: Loanee Customer__</span>
-<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Description:__ These customers tend to use their credit cards a means for taking out loans. </span>
-<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>    They use their credit card to bridge the gap between their financial needs, thus resulting</span>
-<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>    in high cash advances, high balance and high credit utilization. </span>
-<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Stats:__ Range (medium - max).</span>
-<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Utilization - 65% - 97% (High)</span>
-<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Cash Advance - $3,431 - $11,221 (High)</span>
-<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Purchases - $0 - $1,168 (Low)</span>
-<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance - $2,701 - $9,560 (High)</span>
-<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Product Recommendations:__</span>
-<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance Transfer Card Options: Option to transfer their balance to 0% APR cards</span>
-<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>        to save on interests rates.</span>
-<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Debt Consolidation / Personal Loans: Provide debt consolidation loans with lower </span>
-<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>        interest rates, allowing these customers to combine their high-interest debts into a single </span>
-<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>        manageable payment, thus reducing their interest charges and simplifying their repayment strategy.</span>
-<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Counselling: Provide guidance on managing debt, creating budgets and</span>
-<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>        financial improvements.</span>
-<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Builder Loans: Credit builder loans are specifically designed to help </span>
-<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a>        individuals build/improve their credit scores. Such loans are secured by the borrower's</span>
-<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>        savings account and timely payments are reported to the credit bureaus. These loans </span>
-<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>        benefit both the financial institution through interest earned and also benfit the customer by </span>
-<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>        establishing/rebuiliding positive credit history. </span>
-<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>__Cluster 2: Purchasing Customer__</span>
-<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a><span class="ss">    *  </span>__Description:__ These customers use their credit cards as a means for making frequent </span>
-<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>    purchases. This may be due to the convenience and rewards earned by using their credit cards.</span>
-<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Stats:__ Range (medium - max).</span>
-<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Utilization - 35% - 93% (Medium to High)</span>
-<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Cash Advance - $49 - $4,161 (Low to High, excluding outliers)</span>
-<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Purchases - $1,813 - $4,924 (High)</span>
-<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance - $365 - $4,279 (Low to Medium)</span>
-<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Product Recommendations:__</span>
-<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Rewards Programs: Reward programs where customers earn points, cashback, or</span>
-<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a>        airline miles based on their spending. These programs encourage customers to use their </span>
-<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>        credit cards and provide incentive for loyalty.</span>
-<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Premium Cards: This bank could offer premium cards with enhanced benefits for</span>
-<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a>        frequent users. While these cards typically come with higher annual fees (value for the bank),</span>
-<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a>        they also provide additional perks such as airport lounge access, concierge services,</span>
-<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>        travel insurance, etc. (value for the customer).</span>
-<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Installment Plans: This bank could offer installment plans to these customers,</span>
-<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a>        enabling them to convert larger purchases in smaller, more manageable monthly payments.</span>
-<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Lines / Lower Interest Rates: Frequent card users who have established </span>
-<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a>        positive credit history could be eligible for increased credit lines and lower</span>
-<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a>        interest cards. </span>
-<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>__Cluster 3: Prudent Customer__</span>
-<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a><span class="ss">    *  </span>__Description:__ These customers take a cautious and thoughtful approach to </span>
-<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a>    their credit card usage. They have a sense of responsible financial behavior and </span>
-<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>    consider their spending decisions carefully.</span>
-<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Stats:__ Range (medium - max).</span>
-<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Utilization - 4% - 52% (Low to Medium, excluding outliers)</span>
-<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Cash Advance - $0 - $1,465 (Low to Medium)</span>
-<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Purchases - $460 - $3,431 (Low to Medium)</span>
-<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance - $70 - $1,393 (Low to Medium)</span>
-<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Product Recommendations:__</span>
-<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Low Interest Cards: Offer credit cards with low annual percentage </span>
-<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a>        rates (APRs). These cards offer a lower cost of borrowing, allowing customers </span>
-<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a>        to manage their balances with minimal interest charges. Banks </span>
-<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a>        benefit from interest earned, while customers can maintain their cautious </span>
-<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a>        approach without worrying about excessive interest fees.</span>
-<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Secured Credit Cards: Secured credit cards are an option for customers who want</span>
-<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a>        to build or rebuild their credit while maintaining control over their spending. These </span>
-<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a>        cards require a security deposit as collateral, which sets the credit limit. This offers</span>
-<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a>        an opportunity for cautious customers to establish a positive credit history while banks </span>
-<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a>        benefit from the security deposit and the potential to convert customers to unsecured </span>
-<span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a>        credit cards in the future.</span>
-<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Fraud Protection and Monitoring: Banks can provide enhanced fraud protection and </span>
-<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>        monitoring services for cautious customers. These services include real-time transaction </span>
-<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a>        alerts, identity theft protection, and advanced security features to safeguard against </span>
-<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a>        fraudulent activities. Customers gain peace of mind knowing that their accounts are </span>
-<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a>        closely monitored and protected, while banks can reduce the risk of financial losses due to fraud.</span>
-<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>__Cluster 1: Selective Customer__</span>
-<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a><span class="ss">    *  </span>__Description:__ These customers also have a careful and deliberate approach</span>
-<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a>    to credit card usage, primarily for low/medium value infrequent purchases. They are selective</span>
-<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a>    in their spending choices and prioritize making low/medium value purchases rather than frequent</span>
-<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a>    small transactions.</span>
-<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Stats:__ Range (medium - max).</span>
-<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Utilization - 13% - 98% (Low to High)</span>
-<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Cash Advance - $60 - $3,980 (Low to Medium)</span>
-<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Purchases - $95 - $1,810 (Low to Medium)</span>
-<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance - $365 - $4,279 (Low to Medium)</span>
-<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Product Recommendations:__</span>
-<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Value Purchase Financing: Banks can offer specialized financing options </span>
-<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a>        for infrequent purchases, allowing customers to pay for these purchases </span>
-<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a>        over time with low or 0% interest rates. This benefits customers by providing </span>
-<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a>        affordable installment plans and flexibility in managing their cash flow, while banks </span>
-<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a>        generate interest revenue and foster customer loyalty.</span>
-<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Extended Warranty Protection: Banks can provide extended warranty protection as </span>
-<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>        an added benefit for customers making certain infrequent high-value purchases. This extends </span>
-<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a>        the manufacturer's warranty of these high-value purchases, offering coverage against </span>
-<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a>        unexpected repairs or replacements, providing peace of mind to customers. </span>
-<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a>        The bank benefits from increased card usage and customer satisfaction, potentially </span>
-<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>        leading to long-term loyalty.</span>
-<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Personalized Spending Insights: Banks can offer personalized spending insights </span>
-<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>        and analysis for customers who make infrequent purchases. This includes </span>
-<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>        detailed transaction categorization, spending trends, and recommendations tailored </span>
-<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a>        to their unique spending patterns. It benefits customers by helping them make </span>
-<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>        informed financial decisions and optimize their spending, while banks enhance </span>
-<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a>        customer engagement and strengthen relationships by providing valuable financial insights.</span>
-<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>These are just a few examples of how this bank can build customer personas from </span>
-<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a>the various customer segments/clusters and market financial products to them. It </span>
-<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>is important that these financial products are mutually beneficial to both the bank </span>
-<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>and the customers. </span>
-<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a>The bank can test the success of these financial products through various ways including</span>
-<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a>experimentation (a/b testing), surveys, user analytics, net promoter score (NPS), pilot programs, etc.</span>
-<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a><span class="fu">## __Conclusion__</span></span>
-<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a>In conclusion, customer segmentation and persona creation using the k-means algorithm </span>
-<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a>have emerged as powerful tools in the banking industry. By leveraging data analytics </span>
-<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a>and machine learning techniques, banks can gain a deeper understanding of their customers, </span>
-<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>tailor their offerings to specific segments, and deliver personalized experiences. </span>
-<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a>The k-means algorithm enables the identification of distinct customer groups based on </span>
-<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>behavioral patterns and characteristics, allowing banks to develop targeted strategies, </span>
-<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>design relevant financial products, and enhance customer satisfaction. With customer </span>
-<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a>segmentation and persona creation at the core of their business strategies, banks can </span>
-<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>foster stronger customer relationships, drive growth, and stay ahead in today's competitive </span>
-<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a>landscape.</span>
-<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>**Observation:** Once again we can gleam a  few insights:</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 4:__ Appears to have higher *credit_limit* and also, customers in this cluster</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>tend to make make higher minimum payments, suggesting that some of these customers (who are using</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a>their credit cards to take out loans) are indeed making efforts to pay off their balance. </span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Cluster 2:__ These customers have high the highest *purchase_trx* but also have *payments*,  </span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>*minimum_payment*, *credit_limit* and similar to clusters 1 and 4. These customers while making</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>frequent purchases with their credit tend to pay just the minimum required payments and thus</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a>always maintain some balance on their credit card. </span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>__Clusters 1 and 3:__ These customers appear to have similar characteristics and maintain low</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>levels of use for their credit cards. </span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Customer Persona / Product Recommendations__</span></span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>Based on the analysis in the previous section. We can thus create customer personas</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a>and come up with product recommendations to be marketed to these customers. We'll do this</span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>using the following format; ***Cluster***, ***Persona Name***, ***Description***, ***Stats***, </span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>***Product Recommendations***.</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>__Cluster 4: Loanee Customer__</span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Description:__ These customers tend to use their credit cards a means for taking out loans. </span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>    They use their credit card to bridge the gap between their financial needs, thus resulting</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>    in high cash advances, high balance and high credit utilization. </span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Stats:__ Range (medium - max).</span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Utilization - 65% - 97% (High)</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Cash Advance - $3,431 - $11,221 (High)</span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Purchases - $0 - $1,168 (Low)</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance - $2,701 - $9,560 (High)</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Product Recommendations:__</span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance Transfer Card Options: Option to transfer their balance to 0% APR cards</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>        to save on interests rates.</span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Debt Consolidation / Personal Loans: Provide debt consolidation loans with lower </span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>        interest rates, allowing these customers to combine their high-interest debts into a single </span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a>        manageable payment, thus reducing their interest charges and simplifying their repayment strategy.</span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Counselling: Provide guidance on managing debt, creating budgets and</span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>        financial improvements.</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Builder Loans: Credit builder loans are specifically designed to help </span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a>        individuals build/improve their credit scores. Such loans are secured by the borrower's</span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>        savings account and timely payments are reported to the credit bureaus. These loans </span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>        benefit both the financial institution through interest earned and also benfit the customer by </span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>        establishing/rebuiliding positive credit history. </span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>__Cluster 2: Purchasing Customer__</span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a><span class="ss">    *  </span>__Description:__ These customers use their credit cards as a means for making frequent </span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a>    purchases. This may be due to the convenience and rewards earned by using their credit cards.</span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Stats:__ Range (medium - max).</span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Utilization - 35% - 93% (Medium to High)</span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Cash Advance - $49 - $4,161 (Low to High, excluding outliers)</span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Purchases - $1,813 - $4,924 (High)</span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance - $365 - $4,279 (Low to Medium)</span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Product Recommendations:__</span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Rewards Programs: Reward programs where customers earn points, cashback, or</span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>        airline miles based on their spending. These programs encourage customers to use their </span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a>        credit cards and provide incentive for loyalty.</span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Premium Cards: This bank could offer premium cards with enhanced benefits for</span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a>        frequent users. While these cards typically come with higher annual fees (value for the bank),</span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a>        they also provide additional perks such as airport lounge access, concierge services,</span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a>        travel insurance, etc. (value for the customer).</span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Installment Plans: This bank could offer installment plans to these customers,</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a>        enabling them to convert larger purchases in smaller, more manageable monthly payments.</span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Lines / Lower Interest Rates: Frequent card users who have established </span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>        positive credit history could be eligible for increased credit lines and lower</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a>        interest cards. </span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>__Cluster 3: Prudent Customer__</span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a><span class="ss">    *  </span>__Description:__ These customers take a cautious and thoughtful approach to </span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a>    their credit card usage. They have a sense of responsible financial behavior and </span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a>    consider their spending decisions carefully.</span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Stats:__ Range (medium - max).</span>
+<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Utilization - 4% - 52% (Low to Medium, excluding outliers)</span>
+<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Cash Advance - $0 - $1,465 (Low to Medium)</span>
+<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Purchases - $460 - $3,431 (Low to Medium)</span>
+<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance - $70 - $1,393 (Low to Medium)</span>
+<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Product Recommendations:__</span>
+<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Low Interest Cards: Offer credit cards with low annual percentage </span>
+<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a>        rates (APRs). These cards offer a lower cost of borrowing, allowing customers </span>
+<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a>        to manage their balances with minimal interest charges. Banks </span>
+<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a>        benefit from interest earned, while customers can maintain their cautious </span>
+<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a>        approach without worrying about excessive interest fees.</span>
+<span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Secured Credit Cards: Secured credit cards are an option for customers who want</span>
+<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a>        to build or rebuild their credit while maintaining control over their spending. These </span>
+<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>        cards require a security deposit as collateral, which sets the credit limit. This offers</span>
+<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a>        an opportunity for cautious customers to establish a positive credit history while banks </span>
+<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a>        benefit from the security deposit and the potential to convert customers to unsecured </span>
+<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a>        credit cards in the future.</span>
+<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Fraud Protection and Monitoring: Banks can provide enhanced fraud protection and </span>
+<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a>        monitoring services for cautious customers. These services include real-time transaction </span>
+<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a>        alerts, identity theft protection, and advanced security features to safeguard against </span>
+<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a>        fraudulent activities. Customers gain peace of mind knowing that their accounts are </span>
+<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a>        closely monitored and protected, while banks can reduce the risk of financial losses due to fraud.</span>
+<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>__Cluster 1: Selective Customer__</span>
+<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a><span class="ss">    *  </span>__Description:__ These customers also have a careful and deliberate approach</span>
+<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a>    to credit card usage, primarily for low/medium value infrequent purchases. They are selective</span>
+<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a>    in their spending choices and prioritize making low/medium value purchases rather than frequent</span>
+<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a>    small transactions.</span>
+<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Stats:__ Range (medium - max).</span>
+<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Credit Utilization - 13% - 98% (Low to High)</span>
+<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Cash Advance - $60 - $3,980 (Low to Medium)</span>
+<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Purchases - $95 - $1,810 (Low to Medium)</span>
+<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Balance - $365 - $4,279 (Low to Medium)</span>
+<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a><span class="ss">    * </span>__Product Recommendations:__</span>
+<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Value Purchase Financing: Banks can offer specialized financing options </span>
+<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>        for infrequent purchases, allowing customers to pay for these purchases </span>
+<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a>        over time with low or 0% interest rates. This benefits customers by providing </span>
+<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a>        affordable installment plans and flexibility in managing their cash flow, while banks </span>
+<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a>        generate interest revenue and foster customer loyalty.</span>
+<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Extended Warranty Protection: Banks can provide extended warranty protection as </span>
+<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a>        an added benefit for customers making certain infrequent high-value purchases. This extends </span>
+<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>        the manufacturer's warranty of these high-value purchases, offering coverage against </span>
+<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>        unexpected repairs or replacements, providing peace of mind to customers. </span>
+<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a>        The bank benefits from increased card usage and customer satisfaction, potentially </span>
+<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>        leading to long-term loyalty.</span>
+<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a><span class="ss">        + </span>Personalized Spending Insights: Banks can offer personalized spending insights </span>
+<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>        and analysis for customers who make infrequent purchases. This includes </span>
+<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a>        detailed transaction categorization, spending trends, and recommendations tailored </span>
+<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>        to their unique spending patterns. It benefits customers by helping them make </span>
+<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>        informed financial decisions and optimize their spending, while banks enhance </span>
+<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a>        customer engagement and strengthen relationships by providing valuable financial insights.</span>
+<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a>These are just a few examples of how this bank can build customer personas from </span>
+<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>the various customer segments/clusters and market financial products to them. It </span>
+<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a>is important that these financial products are mutually beneficial to both the bank </span>
+<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a>and the customers. </span>
+<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a>The bank can test the success of these financial products through various ways including</span>
+<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a>experimentation (a/b testing), surveys, user analytics, net promoter score (NPS), pilot programs, etc.</span>
+<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Conclusion__</span></span>
+<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>In conclusion, customer segmentation and persona creation using the k-means algorithm </span>
+<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a>have emerged as powerful tools in the banking industry. By leveraging data analytics </span>
+<span id="cb1-601"><a href="#cb1-601" aria-hidden="true" tabindex="-1"></a>and machine learning techniques, banks can gain a deeper understanding of their customers, </span>
+<span id="cb1-602"><a href="#cb1-602" aria-hidden="true" tabindex="-1"></a>tailor their offerings to specific segments, and deliver personalized experiences. </span>
+<span id="cb1-603"><a href="#cb1-603" aria-hidden="true" tabindex="-1"></a>The k-means algorithm enables the identification of distinct customer groups based on </span>
+<span id="cb1-604"><a href="#cb1-604" aria-hidden="true" tabindex="-1"></a>behavioral patterns and characteristics, allowing banks to develop targeted strategies, </span>
+<span id="cb1-605"><a href="#cb1-605" aria-hidden="true" tabindex="-1"></a>design relevant financial products, and enhance customer satisfaction. With customer </span>
+<span id="cb1-606"><a href="#cb1-606" aria-hidden="true" tabindex="-1"></a>segmentation and persona creation at the core of their business strategies, banks can </span>
+<span id="cb1-607"><a href="#cb1-607" aria-hidden="true" tabindex="-1"></a>foster stronger customer relationships, drive growth, and stay ahead in today's competitive </span>
+<span id="cb1-608"><a href="#cb1-608" aria-hidden="true" tabindex="-1"></a>landscape.</span>
+<span id="cb1-609"><a href="#cb1-609" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-610"><a href="#cb1-610" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
