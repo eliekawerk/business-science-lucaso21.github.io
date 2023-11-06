@@ -201,7 +201,7 @@ with the data splits, all of which are aspects of the pipeline that require care
 attention. However, such concerns will be addressed in the subsequent iterations
 of the project, where model accuracy and generalization become the central focus.
 
-::: {.callout-important}
+::: {.callout-note}
 The immediate goal is to establish that the pipeline correctly processes data through 
 all its stages, ensuring that the model receives the input in the expected format and 
 that the output is appropriately captured and stored. This verification is crucial 
