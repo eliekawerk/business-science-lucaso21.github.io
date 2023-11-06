@@ -1,0 +1,28 @@
+---
+title: "Predicting Hourly Bike Rentals"
+subtitle: "In Persuit of Model Accuracy"
+date: 07/29/2023
+author: Lucas Okwudishu
+title-block-banner: true
+format:
+  html:
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: flatly
+    code-fold: false
+    code-tools: true
+    page-layout: article
+link-citations: true
+categories: [predictive analytics]
+image: "cover_image.png"
+---
+
+![](cover_image.png){width=90% fig-align="center" .shaded-border}
+
+A data science project to predict hourly bike rentals in the city of Seoul using
+date and weather seasons. Read analysis write up on [Medium](https://medium.com/@clfo2014/predicting-hourly-bike-rentals-8eed64dd1d)
+
+
+

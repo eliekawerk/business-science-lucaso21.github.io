@@ -52,7 +52,7 @@ historical data, they learn to anticipate future demands with a considerable deg
 
 # **Implementation Strategy**
 
-![](png/workflow.png){width=100% fig-align="center" .shaded-border}
+![](workflow.png){width=100% fig-align="center" .shaded-border}
 
 
 - **Data Collection and Management:**
