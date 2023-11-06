@@ -1,0 +1,99 @@
+---
+title: "Strategic Bike Pricing: Harnessing Machine Learning for Market Edge"
+subtitle: "An Analytic Approach to Competitive Price Modeling in Bike Manufacturing"
+date: 11/02/2022
+author: Lucas Okwudishu
+title-block-banner: true
+format:
+  html:
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: flatly
+    code-fold: false
+    code-tools: true
+    page-layout: article
+link-citations: true
+categories: [machine learning, web scraping, shiny]
+image: "app.gif"
+---
+
+
+# **Problem Statement**
+
+In the competitive bike manufacturing industry, pricing strategies can significantly 
+impact market share and profitability. A hypothetical bike manufacturer faces the 
+challenge of setting prices that are competitive yet profitable, adapting to market 
+demands without compromising margins. To stay competitive, the manufacturer needs 
+a data-driven approach to dynamically adjust prices based on bike features and market trends.
+
+---
+
+# **Solution**
+
+The solution proposed is an end-to-end analysis that leverages machine learning 
+models to recommend a competitive pricing strategy. This approach utilizes a detailed 
+dataset with features that influence bike pricing, coupled with advanced analytics 
+to create a robust pricing model. The recommended strategy provides flexibility 
+through multiple models to accommodate different pricing scenarios, from everyday 
+competitive pricing to strategic markups and markdowns.
+
+## **Implementation**
+
+* **Data Collection:** Data was gathered through web scraping from 
+the [Trek bikes](https://www.trekbikes.com/us/en_US/) website, ensuring a rich 
+dataset for analysis.
+
+::: {.callout-note title="Web Scraping"}
+Web-scraping script available 
+[here](https://github.com/LucasO21/bike_pricing_recommender/blob/main/R/00_web_scraping.R).
+:::
+
+* **Feature Engineering:** Bike attributes such as model, year, frame material, 
+and additional features like electrical components and shock presence were encoded. 
+Keywords indicative of special features and parts manufacturers were also extracted 
+to enrich the dataset.
+
+::: {.callout-note title="Data Prep"}
+Data prep script available 
+[here](https://github.com/LucasO21/bike_pricing_recommender/blob/main/R/01_data_preparation.R).
+:::
+
+* **Model Development:** Four machine learning models were chosen for price prediction: 
+RANDOM FOREST, XGBOOST, GLMNET (Linear Regression), and MARS (Multivariate Adaptive Regression Splines).
+Model Training and Validation: Each model was trained using the prepared dataset, 
+validated, and its pricing predictions were compared to actual prices to gauge competitiveness.
+
+* **Strategy Formulation:** The RANDOM FOREST model was designated as the standard 
+"every day" pricing model due to its accurate price predictions. The XGBOOST model
+was chosen for price markups given its higher price points, while the GLMNET and 
+MARS models were selected for markdown scenarios due to their lower price predictions.
+Deployment:
+
+::: {.callout-note title="Modeling"}
+Modeling script available 
+[here](https://github.com/LucasO21/bike_pricing_recommender/blob/main/R/02_modeling.R).
+:::
+
+* **Deployment:** A user-friendly shiny app was developed to deploy the analysis. 
+The app allows users to select bike specifications and select a pricing model to 
+receive price recommendations.
+
+::: {.callout-note title="Shiny App"}
+Code for shiny app available 
+[here](https://github.com/LucasO21/bike_pricing_recommender/tree/main/app).
+:::
+
+---
+
+# **Shiny App**
+You can interact with the shiny app [here](https://lucas-okwudishu.shinyapps.io/price_prediction_app/?_ga=2.35939360.1020703531.1665930622-498138199.1665930622).
+
+![](app.gif){width=80% fig-align=center}
+
+---
+
+# **Reproducible Code**
+Reproducible code available in [this](https://github.com/LucasO21/bike_pricing_recommender) github repo.
+
