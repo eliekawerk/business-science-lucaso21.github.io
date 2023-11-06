@@ -11,6 +11,20 @@ website:
         text: Home
       - href: projects.qmd
         text: Projects
+      - href: blog.qmd
+        text: Blog
+      
+    right: 
+      - icon: linkedin
+      - href: https://linkedin.com/in/lucasokwudishu
+      - aria-label: Quarto Linkedln
+      - icon: github
+      - href: https://github.com/LucasO21/
+      - aria-label: Quarto Github
+      - icon: medium
+      - href: https://medium.com/@clfo2014
+      - aria-label: Quarto Medium
+  
         
   page-footer:
     center: |
@@ -19,6 +33,8 @@ website:
 
 format:
   html:
+    includes:
+      in-header: navbar-styles.css
     theme: flatly
     css: styles.css
     toc: true

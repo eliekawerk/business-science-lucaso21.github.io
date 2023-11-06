@@ -1,0 +1,4 @@
+/* navbar-styles.css */
+.navbar a.icon::before {
+  color: white !important;
+}

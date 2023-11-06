@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lucaso21.github.io/index.html</loc>
-    <lastmod>2023-11-06T02:00:56.659Z</lastmod>
+    <lastmod>2023-11-06T11:21:53.848Z</lastmod>
   </url>
   <url>
     <loc>https://lucaso21.github.io/projects/customer_segmentation_banking/index.html</loc>
@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://lucaso21.github.io/projects.html</loc>
-    <lastmod>2023-11-06T02:08:25.832Z</lastmod>
+    <lastmod>2023-11-06T11:19:56.747Z</lastmod>
   </url>
   <url>
     <loc>https://lucaso21.github.io/projects/toronto_shelter_project/index.html</loc>
@@ -22,6 +22,10 @@
   </url>
   <url>
     <loc>https://lucaso21.github.io/projects/bike_price_recommender/index.html</loc>
-    <lastmod>2023-11-06T02:13:11.663Z</lastmod>
+    <lastmod>2023-11-06T10:55:09.936Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lucaso21.github.io/blog.html</loc>
+    <lastmod>2023-11-06T11:21:57.288Z</lastmod>
   </url>
 </urlset>
