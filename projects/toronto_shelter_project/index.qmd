@@ -16,7 +16,7 @@ format:
     page-layout: article
 link-citations: true
 categories: [predictive analytics]
-image: "workflow.jpg"
+image: "workflow.png"
 ---
 
 # **Introduction**
