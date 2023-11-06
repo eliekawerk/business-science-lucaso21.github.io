@@ -15,7 +15,7 @@ format:
     code-tools: true
     page-layout: article
 link-citations: true
-categories: [predictive analytics]
+categories: [predictive analytics, machine learning]
 image: "cover_image.png"
 ---
 
