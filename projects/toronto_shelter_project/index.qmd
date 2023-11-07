@@ -72,7 +72,7 @@ historical data, they learn to anticipate future demands with a considerable deg
     - Implement robust app features that allow for real-time updates and the monitoring of model performance over time.
     
 ::: {.callout-important title="Shiny App"}
-Your can interact with the shiny app here.
+Your can interact with the shiny app [here.](https://lucas-okwudishu.shinyapps.io/shelter_occupancy_prediction_app/)
 :::
 
 By following this implementation strategy, this project aims to harness the vast potential of ML to deliver a solution that not only serves the immediate needs of overnight shelters in Toronto but also sets a standard for data-driven decision-making in humanitarian efforts city-wide.
