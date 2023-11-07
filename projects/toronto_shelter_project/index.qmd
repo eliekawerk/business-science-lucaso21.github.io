@@ -251,6 +251,8 @@ ensuring a cohesive and continuous flow of data from raw inputs to actionable ou
 
 # __Deployment__
 
+![](png/app.gif){width=90% fig-align=center}
+
 The deployment of the shelter occupancy forecast into a Shiny application represents 
 the culmination of the data pipeline and the predictive modeling process. Shiny 
 is a highly flexible R package that enables the creation of interactive web 

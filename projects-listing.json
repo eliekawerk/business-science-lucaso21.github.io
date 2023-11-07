@@ -1,9 +1,0 @@
-{
-  "listing": "/projects.html",
-  "items": [
-    "/projects/toronto_shelter_project/index.html",
-    "/projects/bike_rental_prediction/index.html",
-    "/projects/customer_segmentation_banking/index.html",
-    "/projects/bike_price_recommender/index.html"
-  ]
-}
