@@ -19,6 +19,14 @@ categories: [predictive analytics, machine learning, data modeling]
 image: "workflow.png"
 ---
 
+# **Motivation**
+My motivation for this project comes from a desire to bridge the gap between academic 
+exercises and real-world applications in data science. While my previous projects 
+involved use of static data in CSV files, I recognize the need to evolve beyond this 
+static framework. Moving forward, my goal is to build and maintain projects using 
+data pipelines that can handle the ebb and flow of real-world changing/updating data. 
+This project is a step towards that ambition.
+
 # **Introduction**
 In the dynamic urban landscape of Toronto, overnight shelters represent more than 
 just a temporary haven for the homeless. These facilities are a vital component of 
