@@ -41,7 +41,7 @@ levers can be used to drive revenue while eliminating inefficiencies.
 ---
 
 # Experience
-
+<!--
 ### Senior Data Analyst - Hubspot
 * **Tenure** - 2021 - Current
 * **Highlight** - Led analysis that uncovered over $1M savings in customer service reps headcount annually.
@@ -54,13 +54,21 @@ levers can be used to drive revenue while eliminating inefficiencies.
 * **Tenure** - 2019 - 2020 
 * **Highlight** - Reduced inventory carrying costs by over 20% from prior year by identifying inventory reduction opportunities and working with buyers and production managers on efficient inventory management.
 
-
 ### Financial Ops Analyst - Whole Foods
 * **Tenure** - 2015 - 2018 
 * **Highlight** - Led a major process improvement project that resulted in a reduction of inventory costs by over $100K in the first half of 2018.
+-->
+As a Senior Data Analyst at **HubSpot**, I leverage data to refine and bolster our marketing strategies, 
+covering all aspects of the customer journey from acquisition and retention to upgrade.
 
+My professional journey has also included analytic roles at **United Way Worldwide**, **DAP**, 
+and **Whole Foods Market**. The consistent application of data intelligence has been the 
+cornerstone of my professional journey, underscoring my dedication to leveraging 
+analytics for business optimization.
+
+Please contact me for a copy of my full resume. 
 ---
-
+<!--
 # Education
 
 ### Certificate in Business Analytics
@@ -76,4 +84,8 @@ levers can be used to drive revenue while eliminating inefficiencies.
 ### Bachelor of Science in Economics
 * Institution - University of Abuja (Nigeria)
 * Year - 2005
+-->
+# Open Source Contribution
+I am currently contributing to the development of [Pytimetk](https://business-science.github.io/pytimetk/),
+an open source python package for time series analysis.
 
