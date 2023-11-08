@@ -177,7 +177,7 @@ maintenance, repairs, renovations, etc. Thus for making future predictions, a 7
 day average of Actual capacity was used to estimate actual capacity. Also if the 
 model’s prediction of overnight shelter occupancy for beds or rooms (occupied) 
 exceeded the actual capacity, the occupied value was adjusted down to the actual 
-capacity value. For example if the actual capacity for a beds in a particular location 
+capacity value. For example if the actual capacity for beds in a particular location 
 was estimated to be 70, and the model predicted occupied beds for this location 
 on a given night to be 73, this predicted value of 73 was adjusted down to 70 
 (to match the actual capacity), and thus resulting in predicted occupancy rate of 100%.
