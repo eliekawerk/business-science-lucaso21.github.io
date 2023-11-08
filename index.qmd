@@ -40,7 +40,7 @@ levers can be used to drive revenue while eliminating inefficiencies.
 
 ---
 
-# Experience
+# Experience & Education
 <!--
 ### Senior Data Analyst - Hubspot
 * **Tenure** - 2021 - Current
@@ -63,8 +63,11 @@ covering all aspects of the customer journey from acquisition and retention to u
 
 My professional journey has also included analytic roles at **United Way Worldwide**, **DAP**, 
 and **Whole Foods Market**. The consistent application of data intelligence has been the 
-cornerstone of my professional journey, underscoring my dedication to leveraging 
-analytics for business optimization.
+cornerstone of my professional journey.
+
+I also hold a masters degree in Applied Economics from 
+[Johns Hopkins University](https://advanced.jhu.edu/),
+and a certificate in Business Analytics from [George Washington University](https://www.gwu.edu/).
 
 Please contact me for a copy of my full resume. 
 ---
