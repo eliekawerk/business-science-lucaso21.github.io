@@ -31,7 +31,7 @@ not just a promise, but a reality.
 # **Problem Statement**
 
 The challenge lies in effectively forecasting the occupancy rates of these shelters. 
-Accurate predictions are not merely statistical triumphs; they are the an important tool
+Accurate predictions are not merely statistical triumphs; they are an important tool
 in the complex machinery of social support, determining the operational efficacy 
 and resource optimization of these critical infrastructures. The implications of 
 such forecasts extend beyond the confines of the shelters themselves, influencing policy-making, 
@@ -56,7 +56,7 @@ historical data, they learn to anticipate future demands with a considerable deg
 
 
 - **Data Collection and Management:**
-    - Utilize the     [Toronto Open   Data](https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/)
+    - Utilize the [Toronto Open   Data](https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/)
     API to collect historical occupancy data from multiple overnight shelters.
     - Gather additional relevant datasets such as historical weather patterns 
     from [AccuWeather API](https://developer.accuweather.com/).
@@ -72,7 +72,7 @@ historical data, they learn to anticipate future demands with a considerable deg
     - Implement robust app features that allow for real-time updates and the monitoring of model performance over time.
     
 ::: {.callout-important title="Shiny App"}
-Your can interact with the shiny app [here.](https://lucas-okwudishu.shinyapps.io/shelter_occupancy_prediction_app/)
+You can interact with the shiny app [here.](https://lucas-okwudishu.shinyapps.io/shelter_occupancy_prediction_app/)
 :::
 
 By following this implementation strategy, this project aims to harness the vast potential of ML to deliver a solution that not only serves the immediate needs of overnight shelters in Toronto but also sets a standard for data-driven decision-making in humanitarian efforts city-wide.
@@ -95,7 +95,7 @@ Toronto area from the [AccuWeather API](https://developer.accuweather.com/). Thi
 
 # __Data Storage__
 
-As mentioned earlier, this raw data in stored in a BigQuery project, in a dataset 
+As mentioned earlier, this raw data is stored in a BigQuery project, in a dataset 
 called “raw_data”. This dataset is also used to store historical daily weather 
 data which is used as part of features for predicting overnight shelter occupancy.
 
@@ -217,7 +217,7 @@ optimize the model for accuracy and robustness.
 
 # __Predictions__
 
-Before predictions can be made, an essential data preparation step is conducted 
+Before making predictions, an essential data preparation step is conducted 
 using a DBT model named **`shelter_occupancy_forecast_features`**. This DBT model 
 is responsible for transforming raw data into a structured format that can be utilized 
 for making predictions, essentially generating features that will feed into the stacked 
@@ -302,7 +302,7 @@ of model deployment. By leveraging public APIs, coupled with the analytical capa
 the robust storage of BigQuery, and the power of DBT for data modeling,
 we've demonstrated a successful proof of concept. 
 
-Finally this project also demonstrates some key competencies including business understanding 
+Finally, this project also demonstrates some key competencies including business understanding 
 that guides the project's direction, data gathering and working with APIs, sophisticated data 
 engineering to sculpt raw information into actionable insights, advanced machine learning 
 to forecast outcomes accurately, and effective model deployment to bring these insights into operational use.
@@ -319,7 +319,7 @@ that could be made to the current workflow;
     - **Script for Tracking Predictions vs. Actuals**: Develop and integrate a 
     script within the R environment that routinely compares the predicted values 
     of overnight shelter occupancy with the actual figures as they become available. 
-    include statistical measures as MAE, RMSE to compute accuracy of predictions in production.
+    Include statistical measures such as MAE, RMSE to compute accuracy of predictions in production.
     
     - **Alerts for Deviations**: Implement an alert system that notifies the team 
     when the discrepancy between predicted and actual values exceeds a predefined 
