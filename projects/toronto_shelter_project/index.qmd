@@ -1,6 +1,6 @@
 ---
 title: "Advanced Predictive Analytics for Managing Overnight Shelter Capacity"
-subtitle: "Unifying Big Query DBT, H2O, and APIs for Social Good"
+subtitle: "Unifying BigQuery DBT, H2o, and APIs for Social Good"
 date: 11/02/2023
 author: Lucas Okwudishu
 title-block-banner: true
@@ -31,7 +31,7 @@ not just a promise, but a reality.
 # **Problem Statement**
 
 The challenge lies in effectively forecasting the occupancy rates of these shelters. 
-Accurate predictions are not merely statistical triumphs; they are an important tool
+Accurate predictions are not merely statistical triumphs, they are an important tool
 in the complex machinery of social support, determining the operational efficacy 
 and resource optimization of these critical infrastructures. The implications of 
 such forecasts extend beyond the confines of the shelters themselves, influencing policy-making, 
@@ -45,7 +45,7 @@ moral imperative to ensure that the well being of those in need is safeguarded.
 
 The proposed solution leverages the power of machine learning to analyze historical 
 shelter occupancy data and generate accurate forecasts for overnight shelter occupancy. 
-The approach is to train sophisticated ML models that can identify patterns and trends 
+The approach is to train machine learning models that can identify patterns and trends 
 from past data, considering various factors such as location, day of the week, 
 month of the year, weather conditions, etc. By feeding the models with 
 historical data, they learn to anticipate future demands with a considerable degree of accuracy. This predictive capability is enhanced by incorporating advanced algorithms and ensemble methods that can adapt to the changing dynamics of urban life. The end goal is a robust model capable of aiding shelter administrators to anticipate nightly occupancy rates and thus manage their operations with unprecedented foresight and efficiency.
@@ -63,11 +63,11 @@ historical data, they learn to anticipate future demands with a considerable deg
 - **Data Storage:**
     - Store the collected data securely in [Google BigQuery](https://console.cloud.google.com/bigquery), ensuring the database scales with the inflow of new data and is optimized for complex analytical queries.
 - **Data Transformation:**
-    - Implement [DBT](https://www.getdbt.com/) (Data Build Tool) to perform and manage necessary data transformations, ensuring that the data is clean, structured, and ready for model consumption.
+    - Utilize [DBT](https://www.getdbt.com/) (Data Build Tool) to perform and manage necessary data transformations, ensuring that the data is clean, structured, and ready for model consumption.
 - **Machine Learning Model Development:**
     - Utilize [H2o AutoML](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html), an automated machine learning platform, to build and train predictive models.
     - Evaluate various models and their performances, tuning hyper-parameters and selecting the best-performing model for deployment.
-- **Prediction Deployment:**
+- **Deployment:**
     - Deploy the trained machine learning model via a Shiny app.
     - Implement robust app features that allow for real-time updates and the monitoring of model performance over time.
     
