@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning for Email Lead Scoring"
 subtitle: "A Case Study of Predictive Analytics in Marketing"
-date: 11/02/2023
+date: 12/02/2023
 author: Lucas Okwudishu
 title-block-banner: true
 format:
