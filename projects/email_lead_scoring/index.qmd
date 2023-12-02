@@ -46,16 +46,12 @@ By leveraging machine learning algorithms, such as classification models busines
 The project demonstrates and end-to-end email lead scoring solution for a business, from initial analysis, to modeling, to deployment. Skills demonstrated in this project include -
 
 + Project management. &#9989;
-
 + Business understanding. &#9989;
-
 + Business return on investment and sensitivity analysis. &#9989;
-
 + Exploratory data analysis. &#9989;
-
 + Machine learning (using tools like python, pycaret, mlflow). &#9989;
-
 + Model deployment (using tools like fastapi and streamlit). &#9989;
+
 
 Above all, the project demonstrates how to solve key business problems in the real world.
 
