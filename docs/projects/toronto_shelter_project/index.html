@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <div class="quarto-title-block"><div><h1 class="title">Advanced Predictive Analytics for Managing Overnight Shelter Capacity</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-            <p class="subtitle lead">Unifying Big Query DBT, H2O, and APIs for Social Good</p>
+            <p class="subtitle lead">Unifying BigQuery DBT, H2o, and APIs for Social Good</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">predictive analytics</div>
                 <div class="quarto-category">machine learning</div>
@@ -194,7 +194,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><strong>Introduction</strong></a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation"><strong>Motivation</strong></a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><strong>Introduction</strong></a></li>
   <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement"><strong>Problem Statement</strong></a></li>
   <li><a href="#solution-strategy" id="toc-solution-strategy" class="nav-link" data-scroll-target="#solution-strategy"><strong>Solution Strategy</strong></a></li>
   <li><a href="#implementation-strategy" id="toc-implementation-strategy" class="nav-link" data-scroll-target="#implementation-strategy"><strong>Implementation Strategy</strong></a></li>
@@ -216,17 +217,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
+<section id="motivation" class="level1">
+<h1><strong>Motivation</strong></h1>
+<p>My motivation for this project comes from a desire to bridge the gap between academic exercises and real-world applications in data science. While my previous projects involved use of static data in CSV files, I recognize the need to evolve beyond this static framework. Moving forward, my goal is to build and maintain projects using data pipelines that can handle the ebb and flow of real-world changing/updating data. This project is a step towards that ambition.</p>
+</section>
 <section id="introduction" class="level1">
 <h1><strong>Introduction</strong></h1>
 <p>In the dynamic urban landscape of Toronto, overnight shelters represent more than just a temporary haven for the homeless. These facilities are a vital component of the city’s social support network, providing safety and stability for individuals and families facing the harsh realities of urban life. As an essential service, these shelters embody the collective effort to uphold the welfare of all citizens, ensuring that the city’s commitment to caring for its most vulnerable members is not just a promise, but a reality.</p>
 </section>
 <section id="problem-statement" class="level1">
 <h1><strong>Problem Statement</strong></h1>
-<p>The challenge lies in effectively forecasting the occupancy rates of these shelters. Accurate predictions are not merely statistical triumphs; they are the an important tool in the complex machinery of social support, determining the operational efficacy and resource optimization of these critical infrastructures. The implications of such forecasts extend beyond the confines of the shelters themselves, influencing policy-making, urban planning, and emergency response initiatives. The margin for error is narrow: underestimate, and we risk leaving individuals or families exposed to the elements. Overestimate, and we divert precious resources that could be utilized more effectively elsewhere. The quest for a reliable prediction model is not just a technical endeavor, it is a moral imperative to ensure that the well being of those in need is safeguarded.</p>
+<p>The challenge lies in effectively forecasting the occupancy rates of these shelters. Accurate predictions are not merely statistical triumphs, they are an important tool in the complex machinery of social support, determining the operational efficacy and resource optimization of these critical infrastructures. The implications of such forecasts extend beyond the confines of the shelters themselves, influencing policy-making, urban planning, and emergency response initiatives. The margin for error is narrow: underestimate, and we risk leaving individuals or families exposed to the elements. Overestimate, and we divert precious resources that could be utilized more effectively elsewhere. The quest for a reliable prediction model is not just a technical endeavor, it is a moral imperative to ensure that the well being of those in need is safeguarded.</p>
 </section>
 <section id="solution-strategy" class="level1">
 <h1><strong>Solution Strategy</strong></h1>
-<p>The proposed solution leverages the power of machine learning to analyze historical shelter occupancy data and generate accurate forecasts for overnight shelter occupancy. The approach is to train sophisticated ML models that can identify patterns and trends from past data, considering various factors such as location, day of the week, month of the year, weather conditions, etc. By feeding the models with historical data, they learn to anticipate future demands with a considerable degree of accuracy. This predictive capability is enhanced by incorporating advanced algorithms and ensemble methods that can adapt to the changing dynamics of urban life. The end goal is a robust model capable of aiding shelter administrators to anticipate nightly occupancy rates and thus manage their operations with unprecedented foresight and efficiency.</p>
+<p>The proposed solution leverages the power of machine learning to analyze historical shelter occupancy data and generate accurate forecasts for overnight shelter occupancy. The approach is to train machine learning models that can identify patterns and trends from past data, considering various factors such as location, day of the week, month of the year, weather conditions, etc. By feeding the models with historical data, they learn to anticipate future demands with a considerable degree of accuracy. This predictive capability is enhanced by incorporating advanced algorithms and ensemble methods that can adapt to the changing dynamics of urban life. The end goal is a robust model capable of aiding shelter administrators to anticipate nightly occupancy rates and thus manage their operations with unprecedented foresight and efficiency.</p>
 </section>
 <section id="implementation-strategy" class="level1">
 <h1><strong>Implementation Strategy</strong></h1>
@@ -247,14 +252,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li><strong>Data Transformation:</strong>
 <ul>
-<li>Implement <a href="https://www.getdbt.com/">DBT</a> (Data Build Tool) to perform and manage necessary data transformations, ensuring that the data is clean, structured, and ready for model consumption.</li>
+<li>Utilize <a href="https://www.getdbt.com/">DBT</a> (Data Build Tool) to perform and manage necessary data transformations, ensuring that the data is clean, structured, and ready for model consumption.</li>
 </ul></li>
 <li><strong>Machine Learning Model Development:</strong>
 <ul>
 <li>Utilize <a href="https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html">H2o AutoML</a>, an automated machine learning platform, to build and train predictive models.</li>
 <li>Evaluate various models and their performances, tuning hyper-parameters and selecting the best-performing model for deployment.</li>
 </ul></li>
-<li><strong>Prediction Deployment:</strong>
+<li><strong>Deployment:</strong>
 <ul>
 <li>Deploy the trained machine learning model via a Shiny app.</li>
 <li>Implement robust app features that allow for real-time updates and the monitoring of model performance over time.</li>
@@ -270,7 +275,7 @@ Shiny App
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Your can interact with the shiny app <a href="https://lucas-okwudishu.shinyapps.io/shelter_occupancy_prediction_app/">here.</a></p>
+<p>You can interact with the shiny app <a href="https://lucas-okwudishu.shinyapps.io/shelter_occupancy_prediction_app/">here.</a></p>
 </div>
 </div>
 <p>By following this implementation strategy, this project aims to harness the vast potential of ML to deliver a solution that not only serves the immediate needs of overnight shelters in Toronto but also sets a standard for data-driven decision-making in humanitarian efforts city-wide.</p>
@@ -284,7 +289,7 @@ Shiny App
 </section>
 <section id="data-storage" class="level1">
 <h1><strong>Data Storage</strong></h1>
-<p>As mentioned earlier, this raw data in stored in a BigQuery project, in a dataset called “raw_data”. This dataset is also used to store historical daily weather data which is used as part of features for predicting overnight shelter occupancy.</p>
+<p>As mentioned earlier, this raw data is stored in a BigQuery project, in a dataset called “raw_data”. This dataset is also used to store historical daily weather data which is used as part of features for predicting overnight shelter occupancy.</p>
 <hr>
 </section>
 <section id="data-transformation" class="level1">
@@ -322,7 +327,7 @@ Shiny App
 <ul>
 <li><p>In this beta phase, I focused on creating predictions for the top 3 organizations with the highest number of locations. These include <strong>City of Toronto</strong> (Org ID 1), <strong>Homes First Society</strong> (Org ID 15) and <strong>Dixon Hall</strong> (Org ID 6). All together, these 3 organizations have about 40 distinct locations. Again in a later phase, I hope to expand this project to include all locations.</p></li>
 <li><p>I also focused on only modeling locations that have been open (in 2022 and 2023) for at least 75% of the year.</p></li>
-<li><p>According to the <a href="https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/">information</a> in the shelter occupancy dataset, there are two measures of capacity; <strong>Funding</strong> capacity reports the number of beds or rooms that a program is intended to provide. <strong>Actual</strong> capacity reports the number of beds or rooms in service and showing as available for occupancy in the shelter management information system at the time of reporting. There are a number of reasons why beds or rooms may be temporarily out of service, including maintenance, repairs, renovations, etc. Thus for making future predictions, a 7 day average of Actual capacity was used to estimate actual capacity. Also if the model’s prediction of overnight shelter occupancy for beds or rooms (occupied) exceeded the actual capacity, the occupied value was adjusted down to the actual capacity value. For example if the actual capacity for a beds in a particular location was estimated to be 70, and the model predicted occupied beds for this location on a given night to be 73, this predicted value of 73 was adjusted down to 70 (to match the actual capacity), and thus resulting in predicted occupancy rate of 100%.</p></li>
+<li><p>According to the <a href="https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/">information</a> in the shelter occupancy dataset, there are two measures of capacity; <strong>Funding</strong> capacity reports the number of beds or rooms that a program is intended to provide. <strong>Actual</strong> capacity reports the number of beds or rooms in service and showing as available for occupancy in the shelter management information system at the time of reporting. There are a number of reasons why beds or rooms may be temporarily out of service, including maintenance, repairs, renovations, etc. Thus for making future predictions, a 7 day average of Actual capacity was used to estimate actual capacity. Also if the model’s prediction of overnight shelter occupancy for beds or rooms (occupied) exceeded the actual capacity, the occupied value was adjusted down to the actual capacity value. For example if the actual capacity for beds in a particular location was estimated to be 70, and the model predicted occupied beds for this location on a given night to be 73, this predicted value of 73 was adjusted down to 70 (to match the actual capacity), and thus resulting in predicted occupancy rate of 100%.</p></li>
 </ul>
 <p>As mentioned earlier, H2o AutoML was used to create machine learning models. The model currently being used for making predictions is the H2o AutoML leader <strong>(StackedEnsemble_BestOfFamily_1_AutoML_2_20231026_61754).</strong> A Stacked Ensemble is a model that combines the strengths of multiple algorithms to make predictions. Looking at the metrics, the training data reflects an extremely promising model with very low error rates; MSE of <strong>0.0648</strong>, RMSE of <strong>0.2554</strong>, MAE of <strong>0.1737</strong>.</p>
 <div id="fig-id" class="quarto-figure quarto-figure-center anchored">
@@ -351,7 +356,7 @@ Note
 </section>
 <section id="predictions" class="level1">
 <h1><strong>Predictions</strong></h1>
-<p>Before predictions can be made, an essential data preparation step is conducted using a DBT model named <strong><code>shelter_occupancy_forecast_features</code></strong>. This DBT model is responsible for transforming raw data into a structured format that can be utilized for making predictions, essentially generating features that will feed into the stacked ensemble model. The step-by-step process is described below;</p>
+<p>Before making predictions, an essential data preparation step is conducted using a DBT model named <strong><code>shelter_occupancy_forecast_features</code></strong>. This DBT model is responsible for transforming raw data into a structured format that can be utilized for making predictions, essentially generating features that will feed into the stacked ensemble model. The step-by-step process is described below;</p>
 <ol type="1">
 <li><p><strong>Feature Engineering in BigQuery</strong>: The raw data is processed by the DBT model within BigQuery, The <strong><code>shelter_occupancy_forecast_features</code></strong> model applies necessary transformations and engineering to prepare the dataset with features suitable for the predictive model.</p></li>
 <li><p><strong>Data Import into R</strong>: Once the features are ready, the processed dataset is imported into an R environment.</p></li>
@@ -385,7 +390,7 @@ Note
 <h1><strong>Conclusion</strong></h1>
 <p>This project highlights the potential of predictive analytics in the realm of social good. By predicting shelter occupancy rates with greater accuracy, this kind of analysis not only helps cities optimize resource allocation but also serves as a beacon of hope, ensuring that shelters can prepare for and meet the needs of the most vulnerable members of society. It’s a vivid illustration of how data, technology, and human compassion can intersect to create a profound and positive social impact.</p>
 <p>Additionally, this project demonstrates the practical implementation of a real-world analytics pipeline, from data collection to the complexities of model deployment. By leveraging public APIs, coupled with the analytical capabilities of R, the robust storage of BigQuery, and the power of DBT for data modeling, we’ve demonstrated a successful proof of concept.</p>
-<p>Finally this project also demonstrates some key competencies including business understanding that guides the project’s direction, data gathering and working with APIs, sophisticated data engineering to sculpt raw information into actionable insights, advanced machine learning to forecast outcomes accurately, and effective model deployment to bring these insights into operational use.</p>
+<p>Finally, this project also demonstrates some key competencies including business understanding that guides the project’s direction, data gathering and working with APIs, sophisticated data engineering to sculpt raw information into actionable insights, advanced machine learning to forecast outcomes accurately, and effective model deployment to bring these insights into operational use.</p>
 <hr>
 </section>
 <section id="additional-next-steps" class="level1">
@@ -394,7 +399,7 @@ Note
 <ol type="1">
 <li><strong>Accuracy Tracking</strong>:
 <ul>
-<li><p><strong>Script for Tracking Predictions vs.&nbsp;Actuals</strong>: Develop and integrate a script within the R environment that routinely compares the predicted values of overnight shelter occupancy with the actual figures as they become available. include statistical measures as MAE, RMSE to compute accuracy of predictions in production.</p></li>
+<li><p><strong>Script for Tracking Predictions vs.&nbsp;Actuals</strong>: Develop and integrate a script within the R environment that routinely compares the predicted values of overnight shelter occupancy with the actual figures as they become available. Include statistical measures such as MAE, RMSE to compute accuracy of predictions in production.</p></li>
 <li><p><strong>Alerts for Deviations</strong>: Implement an alert system that notifies the team when the discrepancy between predicted and actual values exceeds a predefined threshold, indicating a potential drift in model performance or significant changes in the underlying data.</p></li>
 </ul></li>
 <li><strong>Scale Model Training and Predictions to all Locations</strong>:
@@ -710,7 +715,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Advanced Predictive Analytics for Managing Overnight Shelter Capacity"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Unifying Big Query DBT, H2O, and APIs for Social Good"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Unifying BigQuery DBT, H2o, and APIs for Social Good"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 11/02/2023</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Lucas Okwudishu</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> true</span></span>
@@ -729,335 +734,343 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "workflow.png"</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Introduction**</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>In the dynamic urban landscape of Toronto, overnight shelters represent more than </span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>just a temporary haven for the homeless. These facilities are a vital component of </span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>the city's social support network, providing safety and stability for individuals</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>and families facing the harsh realities of urban life. As an essential service, </span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>these shelters embody the collective effort to uphold the welfare of all citizens, </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>ensuring that the city's commitment to caring for its most vulnerable members is </span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>not just a promise, but a reality.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Problem Statement**</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>The challenge lies in effectively forecasting the occupancy rates of these shelters. </span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>Accurate predictions are not merely statistical triumphs; they are the an important tool</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>in the complex machinery of social support, determining the operational efficacy </span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>and resource optimization of these critical infrastructures. The implications of </span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>such forecasts extend beyond the confines of the shelters themselves, influencing policy-making, </span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>urban planning, and emergency response initiatives. The margin for error is narrow: underestimate, </span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>and we risk leaving individuals or families exposed to the elements. Overestimate, </span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>and we divert precious resources that could be utilized more effectively elsewhere. </span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>The quest for a reliable prediction model is not just a technical endeavor, it is a </span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>moral imperative to ensure that the well being of those in need is safeguarded.</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Solution Strategy**</span></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>The proposed solution leverages the power of machine learning to analyze historical </span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>shelter occupancy data and generate accurate forecasts for overnight shelter occupancy. </span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>The approach is to train sophisticated ML models that can identify patterns and trends </span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>from past data, considering various factors such as location, day of the week, </span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>month of the year, weather conditions, etc. By feeding the models with </span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>historical data, they learn to anticipate future demands with a considerable degree of accuracy. This predictive capability is enhanced by incorporating advanced algorithms and ensemble methods that can adapt to the changing dynamics of urban life. The end goal is a robust model capable of aiding shelter administrators to anticipate nightly occupancy rates and thus manage their operations with unprecedented foresight and efficiency.</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Implementation Strategy**</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="al">![](workflow.png)</span>{width=100% fig-align="center" .shaded-border}</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Collection and Management:**</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Utilize the     <span class="co">[</span><span class="ot">Toronto Open   Data</span><span class="co">](https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/)</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>    API to collect historical occupancy data from multiple overnight shelters.</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Gather additional relevant datasets such as historical weather patterns </span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    from <span class="co">[</span><span class="ot">AccuWeather API</span><span class="co">](https://developer.accuweather.com/)</span>.</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Storage:**</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Store the collected data securely in <span class="co">[</span><span class="ot">Google BigQuery</span><span class="co">](https://console.cloud.google.com/bigquery)</span>, ensuring the database scales with the inflow of new data and is optimized for complex analytical queries.</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Transformation:**</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Implement <span class="co">[</span><span class="ot">DBT</span><span class="co">](https://www.getdbt.com/)</span> (Data Build Tool) to perform and manage necessary data transformations, ensuring that the data is clean, structured, and ready for model consumption.</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Machine Learning Model Development:**</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Utilize <span class="co">[</span><span class="ot">H2o AutoML</span><span class="co">](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html)</span>, an automated machine learning platform, to build and train predictive models.</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Evaluate various models and their performances, tuning hyper-parameters and selecting the best-performing model for deployment.</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Prediction Deployment:**</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Deploy the trained machine learning model via a Shiny app.</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Implement robust app features that allow for real-time updates and the monitoring of model performance over time.</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>::: {.callout-important title="Shiny App"}</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>Your can interact with the shiny app <span class="co">[</span><span class="ot">here.</span><span class="co">](https://lucas-okwudishu.shinyapps.io/shelter_occupancy_prediction_app/)</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>By following this implementation strategy, this project aims to harness the vast potential of ML to deliver a solution that not only serves the immediate needs of overnight shelters in Toronto but also sets a standard for data-driven decision-making in humanitarian efforts city-wide.</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>The following sections walk through each step of the implementation strategy in more detail.</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Motivation**</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>My motivation for this project comes from a desire to bridge the gap between academic </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>exercises and real-world applications in data science. While my previous projects </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>involved use of static data in CSV files, I recognize the need to evolve beyond this </span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>static framework. Moving forward, my goal is to build and maintain projects using </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>data pipelines that can handle the ebb and flow of real-world changing/updating data. </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>This project is a step towards that ambition.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Introduction**</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>In the dynamic urban landscape of Toronto, overnight shelters represent more than </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>just a temporary haven for the homeless. These facilities are a vital component of </span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>the city's social support network, providing safety and stability for individuals</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>and families facing the harsh realities of urban life. As an essential service, </span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>these shelters embody the collective effort to uphold the welfare of all citizens, </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>ensuring that the city's commitment to caring for its most vulnerable members is </span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>not just a promise, but a reality.</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Problem Statement**</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>The challenge lies in effectively forecasting the occupancy rates of these shelters. </span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Accurate predictions are not merely statistical triumphs, they are an important tool</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>in the complex machinery of social support, determining the operational efficacy </span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>and resource optimization of these critical infrastructures. The implications of </span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>such forecasts extend beyond the confines of the shelters themselves, influencing policy-making, </span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>urban planning, and emergency response initiatives. The margin for error is narrow: underestimate, </span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>and we risk leaving individuals or families exposed to the elements. Overestimate, </span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>and we divert precious resources that could be utilized more effectively elsewhere. </span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>The quest for a reliable prediction model is not just a technical endeavor, it is a </span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>moral imperative to ensure that the well being of those in need is safeguarded.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Solution Strategy**</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>The proposed solution leverages the power of machine learning to analyze historical </span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>shelter occupancy data and generate accurate forecasts for overnight shelter occupancy. </span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>The approach is to train machine learning models that can identify patterns and trends </span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>from past data, considering various factors such as location, day of the week, </span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>month of the year, weather conditions, etc. By feeding the models with </span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>historical data, they learn to anticipate future demands with a considerable degree of accuracy. This predictive capability is enhanced by incorporating advanced algorithms and ensemble methods that can adapt to the changing dynamics of urban life. The end goal is a robust model capable of aiding shelter administrators to anticipate nightly occupancy rates and thus manage their operations with unprecedented foresight and efficiency.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="fu"># **Implementation Strategy**</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="al">![](workflow.png)</span>{width=100% fig-align="center" .shaded-border}</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Collection and Management:**</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Utilize the <span class="co">[</span><span class="ot">Toronto Open   Data</span><span class="co">](https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/)</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>    API to collect historical occupancy data from multiple overnight shelters.</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Gather additional relevant datasets such as historical weather patterns </span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>    from <span class="co">[</span><span class="ot">AccuWeather API</span><span class="co">](https://developer.accuweather.com/)</span>.</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Storage:**</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Store the collected data securely in <span class="co">[</span><span class="ot">Google BigQuery</span><span class="co">](https://console.cloud.google.com/bigquery)</span>, ensuring the database scales with the inflow of new data and is optimized for complex analytical queries.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Transformation:**</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Utilize <span class="co">[</span><span class="ot">DBT</span><span class="co">](https://www.getdbt.com/)</span> (Data Build Tool) to perform and manage necessary data transformations, ensuring that the data is clean, structured, and ready for model consumption.</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Machine Learning Model Development:**</span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Utilize <span class="co">[</span><span class="ot">H2o AutoML</span><span class="co">](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html)</span>, an automated machine learning platform, to build and train predictive models.</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Evaluate various models and their performances, tuning hyper-parameters and selecting the best-performing model for deployment.</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Deployment:**</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Deploy the trained machine learning model via a Shiny app.</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Implement robust app features that allow for real-time updates and the monitoring of model performance over time.</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>::: {.callout-important title="Shiny App"}</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>You can interact with the shiny app <span class="co">[</span><span class="ot">here.</span><span class="co">](https://lucas-okwudishu.shinyapps.io/shelter_occupancy_prediction_app/)</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Data Collection__</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>By following this implementation strategy, this project aims to harness the vast potential of ML to deliver a solution that not only serves the immediate needs of overnight shelters in Toronto but also sets a standard for data-driven decision-making in humanitarian efforts city-wide.</span>
 <span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>The first phase of the project involves gathering historical raw data on overnight </span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>shelter occupancy using Open Data APIs, which is then uploaded to BigQuery using an R script. </span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>This includes a one-time data upload for historical data from 2022 and ongoing daily updates for 2023. </span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>To enhance our prediction model, we also collect five-day weather forecasts for the </span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>Toronto area from the <span class="co">[</span><span class="ot">AccuWeather API</span><span class="co">](https://developer.accuweather.com/)</span>. This weather information is a key factor in predicting shelter needs over the next five days, along with the occupancy data.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>The following sections walk through each step of the implementation strategy in more detail.</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Data Collection__</span></span>
 <span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Data Storage__</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>As mentioned earlier, this raw data in stored in a BigQuery project, in a dataset </span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>called “raw_data”. This dataset is also used to store historical daily weather </span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>data which is used as part of features for predicting overnight shelter occupancy.</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>The first phase of the project involves gathering historical raw data on overnight </span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>shelter occupancy using Open Data APIs, which is then uploaded to BigQuery using an R script. </span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>This includes a one-time data upload for historical data from 2022 and ongoing daily updates for 2023. </span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>To enhance our prediction model, we also collect five-day weather forecasts for the </span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>Toronto area from the <span class="co">[</span><span class="ot">AccuWeather API</span><span class="co">](https://developer.accuweather.com/)</span>. This weather information is a key factor in predicting shelter needs over the next five days, along with the occupancy data.</span>
 <span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Data Transformation__</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Data Storage__</span></span>
 <span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>The data transformation phase is critical to ensuring data quality and readiness </span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>for subsequent analysis and predictive modeling. Leveraging DBT, </span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>a set of data models are created to convert raw datasets into a refined form and </span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>stored in a dataset  named **clean_data**.</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a><span class="al">![Sample DBT model lineage](png/dbt_lineage.png)</span>{width=100% fig-align="center" .shaded-border #fig-id}</span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>Below is an explanation of what each DBT model does;</span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Data Cleaning with DBT Models:**</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_2022_2023`**: This model consolidates raw shelter occupancy </span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>    records from 2022 and 2023. It performs a pivot transformation, changing the dataset </span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>    from a wide format (with many columns) to a long format (with rows representing each data point), </span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>    facilitating easier manipulation and analysis.</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_id_mapping`**: To standardize and uniquely identify characteristics </span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>    within the data, this model assigns IDs to distinguishable attributes like </span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>    program model and sector. This process aids in maintaining data integrity and consistency.</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_2022_2023_flagged_id`**: Building on the prior model, </span>
-<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>    this model crafts unique primary keys that map each data row to a specific shelter location and </span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>    program offering, thereby enabling precise tracking and referencing within the dataset.</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>As mentioned earlier, this raw data is stored in a BigQuery project, in a dataset </span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>called “raw_data”. This dataset is also used to store historical daily weather </span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a>data which is used as part of features for predicting overnight shelter occupancy.</span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Data Transformation__</span></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>The data transformation phase is critical to ensuring data quality and readiness </span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>for subsequent analysis and predictive modeling. Leveraging DBT, </span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>a set of data models are created to convert raw datasets into a refined form and </span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>stored in a dataset  named **clean_data**.</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a><span class="al">![Sample DBT model lineage](png/dbt_lineage.png)</span>{width=100% fig-align="center" .shaded-border #fig-id}</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>Below is an explanation of what each DBT model does;</span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Data Cleaning with DBT Models:**</span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_2022_2023`**: This model consolidates raw shelter occupancy </span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>    records from 2022 and 2023. It performs a pivot transformation, changing the dataset </span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>    from a wide format (with many columns) to a long format (with rows representing each data point), </span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>    facilitating easier manipulation and analysis.</span>
 <span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`weather_historical_2022_2023`**: Here, historical weather information for 2022</span>
-<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>    and 2023 is merged.</span>
-<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Preparing Data for Machine Learning:**</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_weather_integration_2022_2023`**: This model integrates </span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>    daily shelter occupancy figures with corresponding weather metrics for each</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>    particular date. It ensures completeness by employing a 3-day rolling average to </span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>    impute any gaps in the weather dataset, thereby maintaining the continuity </span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>    and reliability of the data for machine learning purposes.</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Feature Engineering for Predictive Modeling:**</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_forecast_features`**: Targeting predictive analytics, </span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>    this model generates forward-looking features essential for forecasting shelter </span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>    occupancy. It projects the next five days’ dates for each shelter and program </span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>    pairing and merges in the weather forecast for the same horizon. The result </span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>    is a feature-rich dataset, crafted to anticipate future occupancy rates.</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Machine Learning &amp; Model Development__</span></span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>In this phase, data is imported from BigQuery into R where machine learning models </span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>are built to predict overnight shelter occupancy. A few caveats in this phase - </span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In this beta phase, I focused on creating predictions for the top 3 organizations </span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>with the highest number of locations. These include **City of Toronto** (Org ID 1), </span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>**Homes First Society** (Org ID 15) and **Dixon Hall** (Org ID 6). All together, these 3 </span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>organizations have about 40 distinct locations. Again in a later phase, </span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>I hope to expand this project to include all locations.</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>I also focused on only modeling locations that have been open (in 2022 and 2023) for at least 75% of the year.</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_id_mapping`**: To standardize and uniquely identify characteristics </span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>    within the data, this model assigns IDs to distinguishable attributes like </span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>    program model and sector. This process aids in maintaining data integrity and consistency.</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_2022_2023_flagged_id`**: Building on the prior model, </span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>    this model crafts unique primary keys that map each data row to a specific shelter location and </span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>    program offering, thereby enabling precise tracking and referencing within the dataset.</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`weather_historical_2022_2023`**: Here, historical weather information for 2022</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>    and 2023 is merged.</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Preparing Data for Machine Learning:**</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_weather_integration_2022_2023`**: This model integrates </span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>    daily shelter occupancy figures with corresponding weather metrics for each</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>    particular date. It ensures completeness by employing a 3-day rolling average to </span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>    impute any gaps in the weather dataset, thereby maintaining the continuity </span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>    and reliability of the data for machine learning purposes.</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Feature Engineering for Predictive Modeling:**</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**`shelter_occupancy_forecast_features`**: Targeting predictive analytics, </span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>    this model generates forward-looking features essential for forecasting shelter </span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>    occupancy. It projects the next five days’ dates for each shelter and program </span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>    pairing and merges in the weather forecast for the same horizon. The result </span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>    is a feature-rich dataset, crafted to anticipate future occupancy rates.</span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Machine Learning &amp; Model Development__</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>In this phase, data is imported from BigQuery into R where machine learning models </span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>are built to predict overnight shelter occupancy. A few caveats in this phase - </span>
 <span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>According to the </span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">information</span><span class="co">](https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/)</span> </span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>in the shelter occupancy dataset, there are two measures of capacity; **Funding** capacity reports the </span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>number of beds or rooms that a program is intended to provide. **Actual** capacity </span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>reports the number of beds or rooms in service and showing as available for occupancy </span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a>in the shelter management information system at the time of reporting. There are </span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>a number of reasons why beds or rooms may be temporarily out of service, including </span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>maintenance, repairs, renovations, etc. Thus for making future predictions, a 7 </span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>day average of Actual capacity was used to estimate actual capacity. Also if the </span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>model’s prediction of overnight shelter occupancy for beds or rooms (occupied) </span>
-<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>exceeded the actual capacity, the occupied value was adjusted down to the actual </span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>capacity value. For example if the actual capacity for a beds in a particular location </span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>was estimated to be 70, and the model predicted occupied beds for this location </span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>on a given night to be 73, this predicted value of 73 was adjusted down to 70 </span>
-<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>(to match the actual capacity), and thus resulting in predicted occupancy rate of 100%.</span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>As mentioned earlier, H2o AutoML was used to create machine learning models. </span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>The model currently being used for making predictions is the H2o AutoML leader **(StackedEnsemble_BestOfFamily_1_AutoML_2_20231026_61754).** A Stacked Ensemble </span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>is a model that combines the strengths of multiple algorithms to make predictions. </span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>Looking at the metrics, the training data reflects an extremely promising model </span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>with very low error rates; MSE of **0.0648**, RMSE of **0.2554**, MAE of **0.1737**.</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="al">![H2o AutoML Leaderboard](png/leaderboard.png)</span>{width=100% fig-align="center" .shaded-border #fig-id}</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>In this beta phase, I focused on creating predictions for the top 3 organizations </span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a>with the highest number of locations. These include **City of Toronto** (Org ID 1), </span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>**Homes First Society** (Org ID 15) and **Dixon Hall** (Org ID 6). All together, these 3 </span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>organizations have about 40 distinct locations. Again in a later phase, </span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>I hope to expand this project to include all locations.</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>I also focused on only modeling locations that have been open (in 2022 and 2023) for at least 75% of the year.</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>According to the </span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">information</span><span class="co">](https://open.toronto.ca/dataset/daily-shelter-overnight-service-occupancy-capacity/)</span> </span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>in the shelter occupancy dataset, there are two measures of capacity; **Funding** capacity reports the </span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>number of beds or rooms that a program is intended to provide. **Actual** capacity </span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>reports the number of beds or rooms in service and showing as available for occupancy </span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>in the shelter management information system at the time of reporting. There are </span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>a number of reasons why beds or rooms may be temporarily out of service, including </span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>maintenance, repairs, renovations, etc. Thus for making future predictions, a 7 </span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>day average of Actual capacity was used to estimate actual capacity. Also if the </span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>model’s prediction of overnight shelter occupancy for beds or rooms (occupied) </span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>exceeded the actual capacity, the occupied value was adjusted down to the actual </span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>capacity value. For example if the actual capacity for beds in a particular location </span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>was estimated to be 70, and the model predicted occupied beds for this location </span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>on a given night to be 73, this predicted value of 73 was adjusted down to 70 </span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>(to match the actual capacity), and thus resulting in predicted occupancy rate of 100%.</span>
 <span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>However, a markedly different picture is painted when we consider the validation </span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>data metrics, which reveal an MSE of **152.8** and an RMSE of **12.3630**. The MAE on </span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>the validation set is **7.1667**. The large discrepancy between the training and </span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>validation metrics raises concerns about the model's ability to generalize, </span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>suggesting that it may have over-fitted to the training data.</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>As mentioned earlier, H2o AutoML was used to create machine learning models. </span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>The model currently being used for making predictions is the H2o AutoML leader **(StackedEnsemble_BestOfFamily_1_AutoML_2_20231026_61754).** A Stacked Ensemble </span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>is a model that combines the strengths of multiple algorithms to make predictions. </span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>Looking at the metrics, the training data reflects an extremely promising model </span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>with very low error rates; MSE of **0.0648**, RMSE of **0.2554**, MAE of **0.1737**.</span>
 <span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>Cross-validation metrics serve as a middle ground, offering a more generalized </span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>assessment of model performance. These are less optimistic than the training metrics </span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>but far better than the validation metrics. With a cross-validated RMSE of **0.9291**</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>and MAE of **0.3556**, the model demonstrates decent predictive ability on data it </span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>was not trained on. However, the higher standard deviation in these cross-validated </span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>metrics suggests some variability in the model’s performance across different subsets of the data.</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>It is essential to note that discrepancies between training and validation metrics, </span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>such as those observed, could potentially signal data leakage, overfitting, or issues </span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>with the data splits, all of which are aspects of the pipeline that require careful </span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>attention. However, such concerns will be addressed in the subsequent iterations</span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>of the project, where model accuracy and generalization become the central focus.</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>The immediate goal is to establish that the pipeline correctly processes data through </span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>all its stages, ensuring that the model receives the input in the expected format and </span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>that the output is appropriately captured and stored. This verification is crucial </span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>for scalability and reliability before fine-tuning the model's predictive capabilities. </span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>Once this is confirmed, iterative improvements on the model, such as hyperparameter tuning, </span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>cross-validation strategy adjustments, and feature selection, will be undertaken to </span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>optimize the model for accuracy and robustness.</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Predictions__</span></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>Before predictions can be made, an essential data preparation step is conducted </span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>using a DBT model named **`shelter_occupancy_forecast_features`**. This DBT model </span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>is responsible for transforming raw data into a structured format that can be utilized </span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>for making predictions, essentially generating features that will feed into the stacked </span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>ensemble model. The step-by-step process is described below;</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="al">![H2o AutoML Leaderboard](png/leaderboard.png)</span>{width=100% fig-align="center" .shaded-border #fig-id}</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>However, a markedly different picture is painted when we consider the validation </span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>data metrics, which reveal an MSE of **152.8** and an RMSE of **12.3630**. The MAE on </span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>the validation set is **7.1667**. The large discrepancy between the training and </span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>validation metrics raises concerns about the model's ability to generalize, </span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a>suggesting that it may have over-fitted to the training data.</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>Cross-validation metrics serve as a middle ground, offering a more generalized </span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>assessment of model performance. These are less optimistic than the training metrics </span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>but far better than the validation metrics. With a cross-validated RMSE of **0.9291**</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>and MAE of **0.3556**, the model demonstrates decent predictive ability on data it </span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>was not trained on. However, the higher standard deviation in these cross-validated </span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>metrics suggests some variability in the model’s performance across different subsets of the data.</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>It is essential to note that discrepancies between training and validation metrics, </span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>such as those observed, could potentially signal data leakage, overfitting, or issues </span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>with the data splits, all of which are aspects of the pipeline that require careful </span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>attention. However, such concerns will be addressed in the subsequent iterations</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>of the project, where model accuracy and generalization become the central focus.</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>The immediate goal is to establish that the pipeline correctly processes data through </span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>all its stages, ensuring that the model receives the input in the expected format and </span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>that the output is appropriately captured and stored. This verification is crucial </span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>for scalability and reliability before fine-tuning the model's predictive capabilities. </span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>Once this is confirmed, iterative improvements on the model, such as hyperparameter tuning, </span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>cross-validation strategy adjustments, and feature selection, will be undertaken to </span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>optimize the model for accuracy and robustness.</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Feature Engineering in BigQuery**: The raw data is processed by the DBT model </span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>within BigQuery,  The **`shelter_occupancy_forecast_features`** model applies necessary </span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>transformations and engineering to prepare the dataset with features suitable for the predictive model.</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Data Import into R**: Once the features are ready, the processed dataset is </span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>imported into an R environment. </span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Prediction with the Stacked Ensemble Model**: Within R, the stacked ensemble </span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>model is applied to the feature set to generate forecasts. Given the model's composition </span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>from the AutoML run, it utilizes its combination of base learners and meta-learner </span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>to output highly informed predictions.</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Predictions__</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>Before making predictions, an essential data preparation step is conducted </span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>using a DBT model named **`shelter_occupancy_forecast_features`**. This DBT model </span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>is responsible for transforming raw data into a structured format that can be utilized </span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>for making predictions, essentially generating features that will feed into the stacked </span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>ensemble model. The step-by-step process is described below;</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Feature Engineering in BigQuery**: The raw data is processed by the DBT model </span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>within BigQuery,  The **`shelter_occupancy_forecast_features`** model applies necessary </span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>transformations and engineering to prepare the dataset with features suitable for the predictive model.</span>
 <span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Export Predictions to BigQuery**: The predictions made by the ensemble model are </span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>then exported back into BigQuery. This reintegration allows for seamless storage and </span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>potential further analysis within the cloud data warehouse environment.</span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>This pipeline exemplifies a modern analytical workflow, leveraging the strengths of </span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>various technologies; BigQuery for scalable data storage and preprocessing, DBT </span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>for data transformation and feature engineering, R for statistical modeling and </span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>predictions, and H2O for advanced machine learning techniques. By loading the </span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>predictive results back into BigQuery, the data becomes readily accessible for </span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>business intelligence tools, further analytics, or downstream applications, </span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>ensuring a cohesive and continuous flow of data from raw inputs to actionable outputs.</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Data Import into R**: Once the features are ready, the processed dataset is </span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>imported into an R environment. </span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Prediction with the Stacked Ensemble Model**: Within R, the stacked ensemble </span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>model is applied to the feature set to generate forecasts. Given the model's composition </span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>from the AutoML run, it utilizes its combination of base learners and meta-learner </span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>to output highly informed predictions.</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Export Predictions to BigQuery**: The predictions made by the ensemble model are </span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>then exported back into BigQuery. This reintegration allows for seamless storage and </span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>potential further analysis within the cloud data warehouse environment.</span>
 <span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Deployment__</span></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/app.gif)</span>{width=90% fig-align=center}</span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>The deployment of the shelter occupancy forecast into a <span class="co">[</span><span class="ot">Shiny</span><span class="co">](https://lucas-okwudishu.shinyapps.io/shelter_occupancy_prediction_app/)</span> </span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>application represents the culmination of the data pipeline and the predictive modeling process. Shiny </span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>is a highly flexible R package that enables the creation of interactive web </span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>applications directly from R. Here's how the final stage unfolds:</span>
-<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Importing Predictions**: The occupancy predictions, which have been computed </span>
-<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>by the H2o Stacked Ensemble model and stored in BigQuery, are imported into the </span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>Shiny application environment. </span>
-<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Interactive User Interface**: The Shiny application is developed with a </span>
-<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>user-friendly interface that presents the forecast data to end-users. It will feature:</span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Data Table**: An interactive table displaying the forecasted overnight shelter </span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>    occupancy across multiple locations and programs. This table allows for sorting, </span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>    searching, and perhaps filtering to enable users to easily navigate through the data.</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Map Visualization**: A map component will visualize the different shelter </span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>    locations. The map will be color-coded based on predicted occupancy rates, </span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>    providing an intuitive, at-a-glance understanding of the data. Locations can </span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>    be marked with pins or regions shaded to reflect the predicted occupancy, giving users a geographical context.</span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**User Interaction and Customization**: Users will have the ability to select </span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>different dates, locations, or other relevant parameters to refine the predictions </span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>displayed. The Shiny app’s reactivity will ensure that any changes in user input will </span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>automatically update the visualizations and data presented.</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>This Shiny application will serve as a decision support tool, enabling stakeholders </span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>and decision-makers to access predictive insights in a user-friendly format. </span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>It provides a practical means for users to explore and utilize the model's forecasts </span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>to manage shelter occupancy more effectively, ultimately aiding in resource planning </span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>and allocation for the locations and programs in question.</span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>This pipeline exemplifies a modern analytical workflow, leveraging the strengths of </span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>various technologies; BigQuery for scalable data storage and preprocessing, DBT </span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>for data transformation and feature engineering, R for statistical modeling and </span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>predictions, and H2O for advanced machine learning techniques. By loading the </span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>predictive results back into BigQuery, the data becomes readily accessible for </span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>business intelligence tools, further analytics, or downstream applications, </span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>ensuring a cohesive and continuous flow of data from raw inputs to actionable outputs.</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Deployment__</span></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/app.gif)</span>{width=90% fig-align=center}</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>The deployment of the shelter occupancy forecast into a <span class="co">[</span><span class="ot">Shiny</span><span class="co">](https://lucas-okwudishu.shinyapps.io/shelter_occupancy_prediction_app/)</span> </span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>application represents the culmination of the data pipeline and the predictive modeling process. Shiny </span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>is a highly flexible R package that enables the creation of interactive web </span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>applications directly from R. Here's how the final stage unfolds:</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Importing Predictions**: The occupancy predictions, which have been computed </span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>by the H2o Stacked Ensemble model and stored in BigQuery, are imported into the </span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>Shiny application environment. </span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Interactive User Interface**: The Shiny application is developed with a </span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>user-friendly interface that presents the forecast data to end-users. It will feature:</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Data Table**: An interactive table displaying the forecasted overnight shelter </span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>    occupancy across multiple locations and programs. This table allows for sorting, </span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>    searching, and perhaps filtering to enable users to easily navigate through the data.</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Map Visualization**: A map component will visualize the different shelter </span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>    locations. The map will be color-coded based on predicted occupancy rates, </span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>    providing an intuitive, at-a-glance understanding of the data. Locations can </span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>    be marked with pins or regions shaded to reflect the predicted occupancy, giving users a geographical context.</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**User Interaction and Customization**: Users will have the ability to select </span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>different dates, locations, or other relevant parameters to refine the predictions </span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>displayed. The Shiny app’s reactivity will ensure that any changes in user input will </span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>automatically update the visualizations and data presented.</span>
 <span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Conclusion__</span></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>This project highlights the potential of predictive analytics in the realm </span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>of social good. By predicting shelter occupancy rates with greater accuracy, </span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>this kind of analysis not only helps cities optimize resource allocation but </span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>also serves as a beacon of hope, ensuring that shelters can prepare for and meet </span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>the needs of the most vulnerable members of society. It's a vivid illustration of how data, technology, </span>
-<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>and human compassion can intersect to create a profound and positive social impact.</span>
-<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>Additionally, this project demonstrates the practical implementation </span>
-<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>of a real-world analytics pipeline, from data collection to the complexities </span>
-<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>of model deployment. By leveraging public APIs, coupled with the analytical capabilities of R, </span>
-<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>the robust storage of BigQuery, and the power of DBT for data modeling,</span>
-<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>we've demonstrated a successful proof of concept. </span>
-<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>Finally this project also demonstrates some key competencies including business understanding </span>
-<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>that guides the project's direction, data gathering and working with APIs, sophisticated data </span>
-<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>engineering to sculpt raw information into actionable insights, advanced machine learning </span>
-<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>to forecast outcomes accurately, and effective model deployment to bring these insights into operational use.</span>
-<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>This Shiny application will serve as a decision support tool, enabling stakeholders </span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>and decision-makers to access predictive insights in a user-friendly format. </span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>It provides a practical means for users to explore and utilize the model's forecasts </span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>to manage shelter occupancy more effectively, ultimately aiding in resource planning </span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>and allocation for the locations and programs in question.</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Conclusion__</span></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>This project highlights the potential of predictive analytics in the realm </span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>of social good. By predicting shelter occupancy rates with greater accuracy, </span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>this kind of analysis not only helps cities optimize resource allocation but </span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>also serves as a beacon of hope, ensuring that shelters can prepare for and meet </span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>the needs of the most vulnerable members of society. It's a vivid illustration of how data, technology, </span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>and human compassion can intersect to create a profound and positive social impact.</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>Additionally, this project demonstrates the practical implementation </span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>of a real-world analytics pipeline, from data collection to the complexities </span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>of model deployment. By leveraging public APIs, coupled with the analytical capabilities of R, </span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>the robust storage of BigQuery, and the power of DBT for data modeling,</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>we've demonstrated a successful proof of concept. </span>
 <span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Additional Next Steps__</span></span>
-<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>There are still a few things that could enhance this project as well as some improvements</span>
-<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>that could be made to the current workflow;</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>Finally, this project also demonstrates some key competencies including business understanding </span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>that guides the project's direction, data gathering and working with APIs, sophisticated data </span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>engineering to sculpt raw information into actionable insights, advanced machine learning </span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>to forecast outcomes accurately, and effective model deployment to bring these insights into operational use.</span>
 <span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Accuracy Tracking**:</span>
-<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Script for Tracking Predictions vs. Actuals**: Develop and integrate a </span>
-<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>    script within the R environment that routinely compares the predicted values </span>
-<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>    of overnight shelter occupancy with the actual figures as they become available. </span>
-<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>    include statistical measures as MAE, RMSE to compute accuracy of predictions in production.</span>
-<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Alerts for Deviations**: Implement an alert system that notifies the team </span>
-<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>    when the discrepancy between predicted and actual values exceeds a predefined </span>
-<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>    threshold, indicating a potential drift in model performance or significant changes in the underlying data.</span>
-<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Scale Model Training and Predictions to all Locations**:</span>
-<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Currently, a few selected locations are being used in this project. The end </span>
-<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>    goal is to scale modeling and predictions to all locations.</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Additional Next Steps__</span></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>There are still a few things that could enhance this project as well as some improvements</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>that could be made to the current workflow;</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Accuracy Tracking**:</span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Script for Tracking Predictions vs. Actuals**: Develop and integrate a </span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>    script within the R environment that routinely compares the predicted values </span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>    of overnight shelter occupancy with the actual figures as they become available. </span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>    Include statistical measures such as MAE, RMSE to compute accuracy of predictions in production.</span>
 <span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Better Model Experiment Tracking**:</span>
-<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Incorporate model tracking and experiment logging capabilities using a tool </span>
-<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>    like <span class="co">[</span><span class="ot">MLflow</span><span class="co">](https://mlflow.org/)</span>.</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Alerts for Deviations**: Implement an alert system that notifies the team </span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>    when the discrepancy between predicted and actual values exceeds a predefined </span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>    threshold, indicating a potential drift in model performance or significant changes in the underlying data.</span>
 <span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Enhance Shiny Application Enhancement with Modules**:</span>
-<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Modular Design**: Refactor the existing Shiny app into a modular design. </span>
-<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>    Shiny modules are reusable parts of a Shiny app that can simplify app development </span>
-<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>    and maintenance. They help in organizing the code, especially for complex </span>
-<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>    applications with multiple reactive outputs and inputs.</span>
-<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Reproducible Code__</span></span>
-<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">R Project</span><span class="co">](https://github.com/LucasO21/toronto_shelter_project_R/tree/master)</span>.</span>
-<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">DBT Project</span><span class="co">](https://github.com/LucasO21/toronto_shelter_project_DBT)</span>.</span>
-<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Scale Model Training and Predictions to all Locations**:</span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Currently, a few selected locations are being used in this project. The end </span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>    goal is to scale modeling and predictions to all locations.</span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Better Model Experiment Tracking**:</span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>Incorporate model tracking and experiment logging capabilities using a tool </span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>    like <span class="co">[</span><span class="ot">MLflow</span><span class="co">](https://mlflow.org/)</span>.</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Enhance Shiny Application Enhancement with Modules**:</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a><span class="ss">    - </span>**Modular Design**: Refactor the existing Shiny app into a modular design. </span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>    Shiny modules are reusable parts of a Shiny app that can simplify app development </span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>    and maintenance. They help in organizing the code, especially for complex </span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>    applications with multiple reactive outputs and inputs.</span>
 <span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a><span class="fu"># __Reproducible Code__</span></span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">R Project</span><span class="co">](https://github.com/LucasO21/toronto_shelter_project_R/tree/master)</span>.</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">DBT Project</span><span class="co">](https://github.com/LucasO21/toronto_shelter_project_DBT)</span>.</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
