@@ -28,7 +28,7 @@ opportunities.
 
 Email lead scoring plays a crucial role in determining the quality and conversion 
 potential of leads generated through email marketing campaigns. Email lead scoring 
-is a method used by marketers and sales teams to evaluate and prioritize [leads](https://www.wrike.com/marketing-guide/faq/what-is-a-lead-in-marketing/) 
+is a method used by marketers and sales teams to evaluate and prioritize [leads](https://www.wrike.com/marketing-guide/faq/what-is-a-lead-in-marketing/){target="_blank"}
 based on their potential to become customers. It involves assigning scores or ratings 
 to individual leads based on their behavior, interactions, and other characteristics. 
 However, the traditional manual lead scoring methods are time-consuming, subjective, 
@@ -38,7 +38,7 @@ Machine learning based solutions can effectively evaluate the probability of lea
 
 By leveraging machine learning algorithms, such as classification models businesses can create a reliable and automated system that can accurately score and rank email leads according to their conversion potential. The solution will empower email marketers to prioritize their efforts and resources more effectively, enabling them to focus on the most promising leads and improve overall sales and marketing efficiency.
 
-**Note:** This project was completed as part of the [Python for Machine Learning and APIs](https://university.business-science.io/p/ds4b-201-p-machine-learning-and-apis-with-python?el=website) course by [Business Science University](https://www.business-science.io/).
+**Note:** This project was completed as part of the [Python for Machine Learning and APIs](https://university.business-science.io/p/ds4b-201-p-machine-learning-and-apis-with-python?el=website) course by [Business Science University](https://www.business-science.io/){target="_blank"}.
 
 ![](png/title/course_workflow.png){width=70% fig-align="center"}
 
@@ -90,7 +90,7 @@ Business Science Problem Framework.
 
 ![](png/title/bspf_framework.png){width=70% fig-align="center"}
 
-The [Business Science Problem Framework](https://www.business-science.io/bspf.html) (BSPF) is a structured approach used for solving complex business problems, especially those involving data science and analytics. It's designed to streamline the process of transforming a business problem into an analytical problem, and then into a data science solution.
+The [Business Science Problem Framework](https://www.business-science.io/bspf.html){target="_blank"} (BSPF) is a structured approach used for solving complex business problems, especially those involving data science and analytics. It's designed to streamline the process of transforming a business problem into an analytical problem, and then into a data science solution.
 
 
 ---
@@ -98,7 +98,7 @@ The [Business Science Problem Framework](https://www.business-science.io/bspf.ht
 # Business Understanding
 
 ::: {.callout-note title="BSPF Phase"}
-This section falls under the **Understanding drivers** Phase of the [BSPF](https://www.business-science.io/business/2018/06/19/business-science-problem-framework.html).
+This section falls under the **Understanding drivers** Phase of the [BSPF](https://www.business-science.io/business/2018/06/19/business-science-problem-framework.html){target="_blank"}.
 :::
 
 Addressing business challenges like these demands significant resources, including both time and money. Therefore a key question to ask is *"is this problem worth solving?"*
@@ -135,7 +135,7 @@ The only problem is that we still do not know a lot about what causes a subscrib
 # Data Understanding
 
 ::: {.callout-note title="BSPF Phase"}
-This section falls under the **Understand The Drivers** Phase of the [BSPF](https://www.business-science.io/business/2018/06/19/business-science-problem-framework.html).
+This section falls under the **Understand The Drivers** Phase of the [BSPF](https://www.business-science.io/business/2018/06/19/business-science-problem-framework.html){target="_blank"}.
 :::
 
 This phase requires understanding the data available at our disposal to tackle this problem. The visual below gives an overview of the company's crm database including table and field descriptions. Connecting arrows show how each table can be linked to other tables based on common fields.
@@ -156,7 +156,7 @@ First, lets analyze our target feature `made_purchase`.
 
 ![](png/eda/made_purchase_prop.png){width=60% fig-align="center"}
 
-**Observation:** Only **5%** of leads have made a previous purchase, meaning we are dealing with a highly [imbalanced dataset](https://developers.google.com/machine-learning/data-prep/construct/sampling-splitting/imbalanced-data).
+**Observation:** Only **5%** of leads have made a previous purchase, meaning we are dealing with a highly [imbalanced dataset](https://developers.google.com/machine-learning/data-prep/construct/sampling-splitting/imbalanced-data){target="_blank"}.
 
 ### Member Rating vs Made Purchase
 
@@ -252,10 +252,10 @@ This indicates that these additional features could be indicative of `made_purch
 This section falls under the **Encode Alogrithms** phase of the BSPF
 :::
 
-This phase of the analysis focuses on encoding algorithms for email lead scoring. As a reminder the goal is to predict and score email subscribers that are likely to make a purchase, based on features identified and engineered in previous sections. Therefore this is a binary classification problem. For modeling, we use the [Pycaret](https://pycaret.org/) python package. Pycaret is an open-source, low code machine learning library in Python that automates machine learning workflows. Pycaret is not only a package for building machine learning models, instead it is an end-to-end machine learning and model management tool that makes it easy to experiment with multiple machine learning models, while logging all experiments.
+This phase of the analysis focuses on encoding algorithms for email lead scoring. As a reminder the goal is to predict and score email subscribers that are likely to make a purchase, based on features identified and engineered in previous sections. Therefore this is a binary classification problem. For modeling, we use the [Pycaret](https://pycaret.org/){target="_blank"} python package. Pycaret is an open-source, low code machine learning library in Python that automates machine learning workflows. Pycaret is not only a package for building machine learning models, instead it is an end-to-end machine learning and model management tool that makes it easy to experiment with multiple machine learning models, while logging all experiments.
 
 ## Testing Multiple Models
-Several models were initially tested, using [Area Under the Curve](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc) (AUC) as the key metric. Higher AUC indicates a better-performing model in distinguishing positive and negative leads. The chart below shows the AUC along with other metrics from initial modeling. We can see the top 3 models in terms of AUC are Gradient Boosting Classifier (0.8044) CatBoost Classifier (0.8015) and Ada Boost Classifier (0.7965).
+Several models were initially tested, using [Area Under the Curve](https://developers.google.com/machine-learning/crash-course/classification/roc-and-auc){target="_blank"} (AUC) as the key metric. Higher AUC indicates a better-performing model in distinguishing positive and negative leads. The chart below shows the AUC along with other metrics from initial modeling. We can see the top 3 models in terms of AUC are Gradient Boosting Classifier (0.8044) CatBoost Classifier (0.8015) and Ada Boost Classifier (0.7965).
 
 ![](png/modelling_png/best_models.png){width=80% fig-align="center"}
 
@@ -327,9 +327,9 @@ Notice that features that are positively impacting the score include `country_co
 These comparisons underscore the nuanced and individualized way in which different features contribute to the model's predictions for each customer.
 
 ## Blending Models (Ensembling) for Enhanced Performance
-To further improve the predictive performance and extract maximum value from our modeling efforts, we employed a technique called model [ensembling](https://machinelearningmastery.com/tour-of-ensemble-learning-algorithms/). By combining the predictions of multiple models, we aimed to leverage the unique strengths of each model, resulting in a more robust and accurate ensemble prediction.
+To further improve the predictive performance and extract maximum value from our modeling efforts, we employed a technique called model [ensembling](https://machinelearningmastery.com/tour-of-ensemble-learning-algorithms/){target="_blank"}. By combining the predictions of multiple models, we aimed to leverage the unique strengths of each model, resulting in a more robust and accurate ensemble prediction.
 
-After blending and [calibrating](https://www.sciencedirect.com/topics/engineering/model-calibration#:~:text=Model%20calibration%20can%20be%20defined,measurements%20performed%20on%20the%20system.) the top three models, the resulting ensemble had an AUC of **0.8020** which is a very slight difference in AUC from the individual models;
+After blending and [calibrating](https://www.sciencedirect.com/topics/engineering/model-calibration#:~:text=Model%20calibration%20can%20be%20defined,measurements%20performed%20on%20the%20system){target="_blank"}. the top three models, the resulting ensemble had an AUC of **0.8020** which is a very slight difference in AUC from the individual models;
 
 
 |                 | GBM     | Catboost  | Ada Boost |
@@ -356,7 +356,7 @@ This section is part of the **Encode Algorithms** phase of the BSPF.
 
 ## What is MLflow?
 
-[MLflow](https://mlflow.org/) is an open-source platform designed to help data scientists and machine learning engineers track and manage their machine learning experiments. It provides tools for experiment logging, reproducibility, and model management. Developed by Databricks, MLflow aims to simplify the machine learning life-cycle by enabling users to keep track of experiments, compare different models, and efficiently share and deploy ML projects.
+[MLflow](https://mlflow.org/){target="_blank"} is an open-source platform designed to help data scientists and machine learning engineers track and manage their machine learning experiments. It provides tools for experiment logging, reproducibility, and model management. Developed by Databricks, MLflow aims to simplify the machine learning life-cycle by enabling users to keep track of experiments, compare different models, and efficiently share and deploy ML projects.
 
 ![Email Lead Scoring MLflow Dashboard](png/modelling_png/mlflow/dashboard.png){width=120% fig-align="center"}
 
@@ -444,7 +444,7 @@ These business KPIs are then used along with subscriber counts from the [initial
 : Preliminary EV Calculations (Based on 95% Threshold and Sample Factor of 5.0)
 
 ::: {.callout-important title="Expected Value Calculations"}
-To understand how these values are calculated, please refer to [this](https://github.com/LucasO21/DS4B_Python_ML_And_APIs/tree/main/analysis/ev_calculation) excel sheet.
+To understand how these values are calculated, please refer to [this](https://github.com/LucasO21/DS4B_Python_ML_And_APIs/tree/main/analysis/ev_calculation){target="_blank"} excel sheet.
 :::
 
 Finally these preliminary calculations are then used to calculate expected value. The table below is a breakdown of cost vs savings for this new strategy vs our old strategy of targeting all leads with sales emails.
@@ -491,10 +491,10 @@ In conclusion the core of our decision-making process lies in striking a balance
 This section is part of the last 2 phases of the BSPF **(Measure Results and Report Financial Impact)**. Deploying ML models and enabling users to engage with these strategies is key to these last 3 phases of the BSPF.
 :::
 
-We are now progressing into the deployment phase of our email lead scoring project. It is crucial to understand how we integrate the developed models into our business processes. This integration is achieved through the creation of [Application Programming Interfaces](https://en.wikipedia.org/wiki/API) (APIs). The APIs serve as communication gateways between our data models and the user-facing application, in this case, a Streamlit app. This app will enable senior management and other marketing stakeholders to interact with and benefit from our email lead scoring strategies.
+We are now progressing into the deployment phase of our email lead scoring project. It is crucial to understand how we integrate the developed models into our business processes. This integration is achieved through the creation of [Application Programming Interfaces](https://en.wikipedia.org/wiki/API){target="_blank"} (APIs). The APIs serve as communication gateways between our data models and the user-facing application, in this case, a Streamlit app. This app will enable senior management and other marketing stakeholders to interact with and benefit from our email lead scoring strategies.
 
 ## API
-Our API, developed using [FastAPI](https://fastapi.tiangolo.com/), features several endpoints,
+Our API, developed using [FastAPI](https://fastapi.tiangolo.com/){target="_blank"}, features several endpoints,
 each serving a specific purpose;
 
 1. Main Endpoint `("/")`
@@ -523,7 +523,7 @@ This section is part of the last 2 phases of the BSPF **(Measure Results and Rep
 :::
 
 
-In this final phase of the email lead scoring project, we transition from the development of [API endpoints](#api-endpoints) for our lead scoring strategy to their practical application. Recognizing the importance of deployment in the lifecycle of any data science project, we integrated these APIs into a user-friendly [Streamlit](https://streamlit.io/) application. This step is instrumental in transforming our analytical insights into actionable tools, directly accessible to senior management and other marketing stakeholders.
+In this final phase of the email lead scoring project, we transition from the development of [API endpoints](#api-endpoints) for our lead scoring strategy to their practical application. Recognizing the importance of deployment in the lifecycle of any data science project, we integrated these APIs into a user-friendly [Streamlit](https://streamlit.io/){target="_blank"} application. This step is instrumental in transforming our analytical insights into actionable tools, directly accessible to senior management and other marketing stakeholders.
 
 ::: {.callout-important title="Streamlit App"}
 <!--You can access the Streamlit app [here](). -->
@@ -575,7 +575,7 @@ In conclusion, this project not only showcases the practical application of mach
 
 ---
 
-Reproducible code is available on [Github](https://github.com/LucasO21/DS4B_Python_ML_And_APIs).
+Reproducible code is available on [Github](https://github.com/LucasO21/DS4B_Python_ML_And_APIs){target="_blank"}.
 
 
 
