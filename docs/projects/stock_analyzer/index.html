@@ -156,8 +156,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <div class="quarto-title-block"><div><h1 class="title">Shiny Stock Analyzer App</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+            <p class="subtitle lead">Leveraging Technologies for Production Grade Applications</p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">stocks shiny AWS MongoDB Docker</div>
+                <div class="quarto-category">stocks</div>
+                <div class="quarto-category">shiny</div>
+                <div class="quarto-category">AWS EC2</div>
+                <div class="quarto-category">MongoDB</div>
+                <div class="quarto-category">Docker</div>
               </div>
                   </div>
   </div>
@@ -198,7 +203,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#r-and-shiny-the-frontend-duo" id="toc-r-and-shiny-the-frontend-duo" class="nav-link" data-scroll-target="#r-and-shiny-the-frontend-duo">R and Shiny: The Frontend Duo</a></li>
   <li><a href="#amazon-ec2-scalable-hosting" id="toc-amazon-ec2-scalable-hosting" class="nav-link" data-scroll-target="#amazon-ec2-scalable-hosting">Amazon EC2: Scalable Hosting</a></li>
   <li><a href="#mongodb-atlas-secure-credential-storage" id="toc-mongodb-atlas-secure-credential-storage" class="nav-link" data-scroll-target="#mongodb-atlas-secure-credential-storage">MongoDB Atlas: Secure Credential Storage</a></li>
+  <li><a href="#docker-ensuring-consistency-through-containerization" id="toc-docker-ensuring-consistency-through-containerization" class="nav-link" data-scroll-target="#docker-ensuring-consistency-through-containerization">Docker: Ensuring Consistency through Containerization</a></li>
   </ul></li>
+  <li><a href="#how-to-use-the-stock-analyzer-app" id="toc-how-to-use-the-stock-analyzer-app" class="nav-link" data-scroll-target="#how-to-use-the-stock-analyzer-app">How To Use The Stock Analyzer App</a>
+  <ul class="collapse">
+  <li><a href="#authenticationlogin" id="toc-authenticationlogin" class="nav-link" data-scroll-target="#authenticationlogin">Authentication/Login</a></li>
+  <li><a href="#ui-interface" id="toc-ui-interface" class="nav-link" data-scroll-target="#ui-interface">UI Interface</a></li>
+  <li><a href="#toggle-settings" id="toc-toggle-settings" class="nav-link" data-scroll-target="#toggle-settings">Toggle Settings</a></li>
+  <li><a href="#adding-new-favorite-stocks" id="toc-adding-new-favorite-stocks" class="nav-link" data-scroll-target="#adding-new-favorite-stocks">Adding New Favorite Stocks</a></li>
+  <li><a href="#clearing-favorites" id="toc-clearing-favorites" class="nav-link" data-scroll-target="#clearing-favorites">Clearing Favorites</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -230,11 +245,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="mongodb-atlas-secure-credential-storage" class="level2">
 <h2 class="anchored" data-anchor-id="mongodb-atlas-secure-credential-storage">MongoDB Atlas: Secure Credential Storage</h2>
 <p><a href="https://www.mongodb.com/atlas/database" target="_blank">MongoDB</a> Atlas is used for managing and storing authentication credentials securely. Its role is critical in maintaining the security and integrity of user data, a paramount aspect for any application, especially those dealing with sensitive financial information. In addition to storing user credentials, MongoDB is also used to user settings in the application, allowing the user to save stock analysis and retrieve such analysis when the log in later on.</p>
+</section>
+<section id="docker-ensuring-consistency-through-containerization" class="level2">
+<h2 class="anchored" data-anchor-id="docker-ensuring-consistency-through-containerization">Docker: Ensuring Consistency through Containerization</h2>
+<p><a href="https://www.docker.com/" target="_blank">Docker</a> is used to <a href="https://docs.docker.com/guides/walkthroughs/what-is-a-container/">containerize</a> the application, encapsulating it in a package that includes everything needed to run it: code, runtime, system tools, libraries, and settings. Containerization with Docker ensures consistency across various development and deployment environments, streamlining the development and sharing process and mitigating the “it works on my machine” syndrome.</p>
+</section>
+</section>
+<section id="how-to-use-the-stock-analyzer-app" class="level1">
+<h1>How To Use The Stock Analyzer App</h1>
+<section id="authenticationlogin" class="level2">
+<h2 class="anchored" data-anchor-id="authenticationlogin">Authentication/Login</h2>
+<p>You can access the app <a href="https://shiny.lokwudishu.net/stock_analyzer_mongo_atlas/" target="_blank">here</a>. Use either <code>user1</code> and <code>pass1</code> or <code>user2</code> and <code>pass2</code> for login credentials.</p>
+</section>
+<section id="ui-interface" class="level2">
+<h2 class="anchored" data-anchor-id="ui-interface">UI Interface</h2>
+<div id="fig-id" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="png/app_ui.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+<p>Upon logging in, you’ll encounter the user interface with 4 main sections. See screenshot below.</p>
+</section>
+<section id="toggle-settings" class="level2">
+<h2 class="anchored" data-anchor-id="toggle-settings">Toggle Settings</h2>
+<p>Hit the <code>settings</code> icon to toggle user inputs. Here you’ll find settings for;</p>
+<ul>
+<li><p><code>Short Moving Average (Days)</code> - Number of days to calculate short rolling moving average. Max is 40 days.</p></li>
+<li><p><code>Long Moving Average (Days)</code> - Number of days to calculate long rolling moving average. Max is 120 days.</p></li>
+<li><p><code>Time Window (Days)</code> - The number of look back days for analyzing stocks. Max is</p></li>
+</ul>
+<ol start="730" type="1">
+<li></li>
+</ol>
+<div id="fig-id" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="png/settings.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>Once you have your ideal settings, hit <code>Apply &amp; Save</code> to update the trend analysis in the main chart. Hit the settings icon again to hide the user inputs.</p>
+</section>
+<section id="adding-new-favorite-stocks" class="level2">
+<h2 class="anchored" data-anchor-id="adding-new-favorite-stocks">Adding New Favorite Stocks</h2>
+<p>To add a new favorite stock, first hit the <code>Stock List</code> drop down to select a new stock, then hit the heart icon to add it as favorite and create a new favorite card. Also hit the <code>ANALYZE</code> button to add the trend analysis for the new stock as the <strong>Last Analysis</strong></p>
+<div id="fig-id" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="png/add_favorite.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</section>
+<section id="clearing-favorites" class="level2">
+<h2 class="anchored" data-anchor-id="clearing-favorites">Clearing Favorites</h2>
+<p>The user can clear favorites by either removing a single stock as favorite or removing all stocks currently listed as favorites. To do so, hit the <code>CLEAR FAVORITES</code> button. To remove a single stock, select the stock from the drop down list, then hit <code>CLEAR SINGLE</code>. to remove all stocks, just hit the <code>CLEAR ALL FAVORRITES</code> button. Hit <code>EXIT</code> when done.</p>
+<div id="fig-id" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="png/clear_favorite.png" class="img-fluid figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>In summary, this stock analysis application showcases how different technologies can be combined to build user-friendly data science tools. We’ve seen the analytical strength of Tidyquant and R, the engaging interfaces made possible by Shiny, and the stability and security from using Amazon EC2, MongoDB Atlas, and Docker. This project goes beyond just doing the analysis; it ensures that the application is easy to use, safe, and works well under different conditions. It’s a great example of how modern technology can be used to make complex data science accessible and practical for everyday use.</p>
 
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -524,7 +599,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Shiny Stock Analyzer App"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> ""</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Leveraging Technologies for Production Grade Applications"</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 12/15/2023</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Lucas Okwudishu</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="an">title-block-banner:</span><span class="co"> true</span></span>
@@ -539,7 +614,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">    page-layout: article</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="an">link-citations:</span><span class="co"> true</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [stocks shiny AWS MongoDB Docker]</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [stocks, shiny, AWS EC2, MongoDB, Docker]</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> "workflow.png"</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
@@ -566,20 +641,82 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>financial analyses. Tidyquant integrates seamlessly with the R ecosystem, bringing financial </span>
 <span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>modeling, performance measurement, and risk management capabilities to the table.</span>
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## R and Shiny: The Frontend Duo</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>At the heart of our application's user interface are R and Shiny. These are essential in converting complex data analyses into engaging and interactive visualizations and dashboards. Shiny's reactivity and R's analytical power create a dynamic environment where users can interact with the data in real-time, making it an ideal choice for data science applications.</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="fu">## Amazon EC2: Scalable Hosting</span></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Amazon EC2</span><span class="co">](https://aws.amazon.com/pm/ec2/)</span>{target="_blank"} forms the backbone of our application hosting. It offers scalable computing capacity in the cloud, which is crucial for handling varying loads, ensuring that the application remains responsive and available, even during peak usage times.</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## MongoDB Atlas: Secure Credential Storage</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">MongoDB</span><span class="co">](https://www.mongodb.com/atlas/database)</span>{target="_blank"} Atlas is used for </span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>managing and storing authentication credentials securely. Its role is critical in maintaining </span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>the security and integrity of user data, a paramount aspect for any application, </span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>especially those dealing with sensitive financial information. In addition to storing</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>user credentials, MongoDB is also used to user settings in the application, allowing </span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>the user to save stock analysis and retrieve such analysis when the log in later on.</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">## R and Shiny: The Frontend Duo</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>At the heart of our application's user interface are R and Shiny. These are essential in converting complex data analyses into engaging and interactive visualizations and dashboards. Shiny's reactivity and R's analytical power create a dynamic environment where users can interact with the data in real-time, making it an ideal choice for data science applications.</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="fu">## Amazon EC2: Scalable Hosting</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Amazon EC2</span><span class="co">](https://aws.amazon.com/pm/ec2/)</span>{target="_blank"} forms the backbone of our application hosting. It offers scalable computing capacity in the cloud, which is crucial for handling varying loads, ensuring that the application remains responsive and available, even during peak usage times.</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="fu">## MongoDB Atlas: Secure Credential Storage</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">MongoDB</span><span class="co">](https://www.mongodb.com/atlas/database)</span>{target="_blank"} Atlas is used for </span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>managing and storing authentication credentials securely. Its role is critical in maintaining </span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>the security and integrity of user data, a paramount aspect for any application, </span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>especially those dealing with sensitive financial information. In addition to storing</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>user credentials, MongoDB is also used to user settings in the application, allowing </span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>the user to save stock analysis and retrieve such analysis when the log in later on.</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Docker: Ensuring Consistency through Containerization</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Docker</span><span class="co">](https://www.docker.com/)</span>{target="_blank"} is used to </span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">containerize</span><span class="co">](https://docs.docker.com/guides/walkthroughs/what-is-a-container/)</span> the application, encapsulating it in a package that includes everything needed to run it: code, runtime, system tools, libraries, and settings. Containerization with Docker ensures consistency across various development and deployment environments, streamlining the development and sharing process and mitigating the "it works on my machine" syndrome.</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="fu"># How To Use The Stock Analyzer App</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="fu">## Authentication/Login</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>You can access the app <span class="co">[</span><span class="ot">here</span><span class="co">](https://shiny.lokwudishu.net/stock_analyzer_mongo_atlas/)</span>{target="_blank"}. Use either <span class="in">`user1`</span> and <span class="in">`pass1`</span> or <span class="in">`user2`</span> and <span class="in">`pass2`</span> for login credentials.</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a><span class="fu">## UI Interface</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/app_ui)</span>{width=90% fig-align="center" #fig-id}</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>Upon logging in, you'll encounter the user interface with 4 main sections. See screenshot</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>below.</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a><span class="fu">## Toggle Settings</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>Hit the <span class="in">`settings`</span> icon to toggle user inputs. Here you'll find settings for;</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`Short Moving Average (Days)`</span> - Number of days to calculate short rolling moving average.</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>Max is 40 days.</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`Long Moving Average (Days)`</span> - Number of days to calculate long rolling moving average.</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>Max is 120 days.</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`Time Window (Days)`</span> - The number of look back days for analyzing stocks. Max is </span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>730.</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/settings)</span>{width=50% fig-align="center" #fig-id}</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>Once you have your ideal settings, hit <span class="in">`Apply &amp; Save`</span> to update the trend analysis</span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>in the main chart. Hit the settings icon again to hide the user inputs.</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## Adding New Favorite Stocks</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>To add a new favorite stock, first hit the <span class="in">`Stock List`</span> drop down to select a new stock,</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>then hit the heart icon to add it as favorite and create a new favorite card. Also hit</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>the <span class="in">`ANALYZE`</span> button to add the trend analysis for the new stock as the **Last Analysis**</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/add_favorite)</span>{width=90% fig-align="center" #fig-id}</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a><span class="fu">## Clearing Favorites</span></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>The user can clear favorites by either removing a single stock as favorite or removing</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>all stocks currently listed as favorites. To do so, hit the <span class="in">`CLEAR FAVORITES`</span> button.</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>To remove a single stock, select the stock from the drop down list, then hit <span class="in">`CLEAR SINGLE`</span>.</span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>to remove all stocks, just hit the <span class="in">`CLEAR ALL FAVORRITES`</span> button. Hit <span class="in">`EXIT`</span> when done.</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a><span class="al">![](png/clear_favorite)</span>{width=90% fig-align="center" #fig-id}</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conclusion</span></span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>In summary, this stock analysis application showcases how different technologies</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>can be combined to build user-friendly data science tools. We've seen the analytical strength of Tidyquant and R, the engaging interfaces made possible by Shiny, and the stability and security from using Amazon EC2, MongoDB Atlas, and Docker. This project goes beyond just doing the analysis; it ensures that the application is easy to use, safe, and works well under different conditions. It's a great example of how modern technology can be used to make complex data science accessible and practical for everyday use. </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">

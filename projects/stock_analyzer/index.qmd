@@ -1,6 +1,6 @@
 ---
 title: "Shiny Stock Analyzer App"
-subtitle: ""
+subtitle: "Leveraging Technologies for Production Grade Applications"
 date: 12/15/2023
 author: Lucas Okwudishu
 title-block-banner: true
@@ -15,7 +15,7 @@ format:
     code-tools: true
     page-layout: article
 link-citations: true
-categories: [stocks shiny AWS MongoDB Docker]
+categories: [stocks, shiny, AWS EC2, MongoDB, Docker]
 image: "workflow.png"
 ---
 
@@ -64,4 +64,58 @@ the user to save stock analysis and retrieve such analysis when the log in later
 [Docker](https://www.docker.com/){target="_blank"} is used to 
 [containerize](https://docs.docker.com/guides/walkthroughs/what-is-a-container/) the application, encapsulating it in a package that includes everything needed to run it: code, runtime, system tools, libraries, and settings. Containerization with Docker ensures consistency across various development and deployment environments, streamlining the development and sharing process and mitigating the "it works on my machine" syndrome.
 
+
+# How To Use The Stock Analyzer App
+
+
+## Authentication/Login
+You can access the app [here](https://shiny.lokwudishu.net/stock_analyzer_mongo_atlas/){target="_blank"}. Use either `user1` and `pass1` or `user2` and `pass2` for login credentials.
+
+## UI Interface
+
+![](png/app_ui){width=90% fig-align="center" #fig-id}
+
+Upon logging in, you'll encounter the user interface with 4 main sections. See screenshot
+below.
+
+## Toggle Settings
+Hit the `settings` icon to toggle user inputs. Here you'll find settings for;
+
+* `Short Moving Average (Days)` - Number of days to calculate short rolling moving average.
+Max is 40 days.
+
+* `Long Moving Average (Days)` - Number of days to calculate long rolling moving average.
+Max is 120 days.
+
+* `Time Window (Days)` - The number of look back days for analyzing stocks. Max is 
+730.
+
+![](png/settings){width=50% fig-align="center" #fig-id}
+
+Once you have your ideal settings, hit `Apply & Save` to update the trend analysis
+in the main chart. Hit the settings icon again to hide the user inputs.
+
+
+## Adding New Favorite Stocks
+
+To add a new favorite stock, first hit the `Stock List` drop down to select a new stock,
+then hit the heart icon to add it as favorite and create a new favorite card. Also hit
+the `ANALYZE` button to add the trend analysis for the new stock as the **Last Analysis**
+
+![](png/add_favorite){width=90% fig-align="center" #fig-id}
+
+
+## Clearing Favorites
+
+The user can clear favorites by either removing a single stock as favorite or removing
+all stocks currently listed as favorites. To do so, hit the `CLEAR FAVORITES` button.
+To remove a single stock, select the stock from the drop down list, then hit `CLEAR SINGLE`.
+to remove all stocks, just hit the `CLEAR ALL FAVORRITES` button. Hit `EXIT` when done.
+
+![](png/clear_favorite){width=90% fig-align="center" #fig-id}
+
+# Conclusion
+
+In summary, this stock analysis application showcases how different technologies
+can be combined to build user-friendly data science tools. We've seen the analytical strength of Tidyquant and R, the engaging interfaces made possible by Shiny, and the stability and security from using Amazon EC2, MongoDB Atlas, and Docker. This project goes beyond just doing the analysis; it ensures that the application is easy to use, safe, and works well under different conditions. It's a great example of how modern technology can be used to make complex data science accessible and practical for everyday use. 
 

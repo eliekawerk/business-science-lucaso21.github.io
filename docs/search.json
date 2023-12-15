@@ -102,7 +102,7 @@
     "href": "projects.html",
     "title": "Explore My Data Science Portfolio",
     "section": "",
-    "text": "Discover how I harness the power of data and analytics through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights.\n\n\n\n\n\n\nNote\n\n\n\nShorter excerpt of some of these projects are available on Medium\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nShiny Stock Analyzer App\n\n\n\n\n\n\n\nstocks shiny AWS MongoDB Docker\n\n\n\n\n\n\n\n\n\n\n\nDec 15, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nMachine Learning for Email Lead Scoring\n\n\nA Case Study of Predictive Analytics in Marketing\n\n\n\n\npredictive analytics\n\n\nmarketing analytics\n\n\nmachine learning\n\n\nroi analysis\n\n\n\n\n\n\n\n\n\n\n\nDec 2, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nAdvanced Predictive Analytics for Managing Overnight Shelter Capacity\n\n\nUnifying BigQuery DBT, H2o, and APIs for Social Good\n\n\n\n\npredictive analytics\n\n\nmachine learning\n\n\ndata modeling\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nPredicting Hourly Bike Rentals\n\n\nIn Persuit of Model Accuracy\n\n\n\n\npredictive analytics\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nCustomer Segmentation & Persona Creation in the Banking Industry\n\n\nA Case Study Using K-Means Algorithm\n\n\n\n\ncustomer segmentation\n\n\n\n\n\n\n\n\n\n\n\nMay 13, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nStrategic Bike Pricing: Harnessing Machine Learning for Market Edge\n\n\nAn Analytic Approach to Competitive Price Modeling in Bike Manufacturing\n\n\n\n\nmachine learning\n\n\nweb scraping\n\n\nshiny\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2022\n\n\nLucas Okwudishu\n\n\n\n\n\n\nNo matching items"
+    "text": "Discover how I harness the power of data and analytics through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights.\n\n\n\n\n\n\nNote\n\n\n\nShorter excerpt of some of these projects are available on Medium\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nShiny Stock Analyzer App\n\n\nLeveraging Technologies for Production Grade Applications\n\n\n\n\nstocks\n\n\nshiny\n\n\nAWS EC2\n\n\nMongoDB\n\n\nDocker\n\n\n\n\n\n\n\n\n\n\n\nDec 15, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nMachine Learning for Email Lead Scoring\n\n\nA Case Study of Predictive Analytics in Marketing\n\n\n\n\npredictive analytics\n\n\nmarketing analytics\n\n\nmachine learning\n\n\nroi analysis\n\n\n\n\n\n\n\n\n\n\n\nDec 2, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nAdvanced Predictive Analytics for Managing Overnight Shelter Capacity\n\n\nUnifying BigQuery DBT, H2o, and APIs for Social Good\n\n\n\n\npredictive analytics\n\n\nmachine learning\n\n\ndata modeling\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nPredicting Hourly Bike Rentals\n\n\nIn Persuit of Model Accuracy\n\n\n\n\npredictive analytics\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nCustomer Segmentation & Persona Creation in the Banking Industry\n\n\nA Case Study Using K-Means Algorithm\n\n\n\n\ncustomer segmentation\n\n\n\n\n\n\n\n\n\n\n\nMay 13, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nStrategic Bike Pricing: Harnessing Machine Learning for Market Edge\n\n\nAn Analytic Approach to Competitive Price Modeling in Bike Manufacturing\n\n\n\n\nmachine learning\n\n\nweb scraping\n\n\nshiny\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2022\n\n\nLucas Okwudishu\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/toronto_shelter_project/index.html",
@@ -264,5 +264,47 @@
     "title": "Shiny Stock Analyzer App",
     "section": "MongoDB Atlas: Secure Credential Storage",
     "text": "MongoDB Atlas: Secure Credential Storage\nMongoDB Atlas is used for managing and storing authentication credentials securely. Its role is critical in maintaining the security and integrity of user data, a paramount aspect for any application, especially those dealing with sensitive financial information. In addition to storing user credentials, MongoDB is also used to user settings in the application, allowing the user to save stock analysis and retrieve such analysis when the log in later on."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#docker-ensuring-consistency-through-containerization",
+    "href": "projects/stock_analyzer/index.html#docker-ensuring-consistency-through-containerization",
+    "title": "Shiny Stock Analyzer App",
+    "section": "Docker: Ensuring Consistency through Containerization",
+    "text": "Docker: Ensuring Consistency through Containerization\nDocker is used to containerize the application, encapsulating it in a package that includes everything needed to run it: code, runtime, system tools, libraries, and settings. Containerization with Docker ensures consistency across various development and deployment environments, streamlining the development and sharing process and mitigating the “it works on my machine” syndrome."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#authenticationlogin",
+    "href": "projects/stock_analyzer/index.html#authenticationlogin",
+    "title": "Shiny Stock Analyzer App",
+    "section": "Authentication/Login",
+    "text": "Authentication/Login\nYou can access the app here. Use either user1 and pass1 or user2 and pass2 for login credentials."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#ui-interface",
+    "href": "projects/stock_analyzer/index.html#ui-interface",
+    "title": "Shiny Stock Analyzer App",
+    "section": "UI Interface",
+    "text": "UI Interface\n\n\n\n\n\nUpon logging in, you’ll encounter the user interface with 4 main sections. See screenshot below."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#toggle-settings",
+    "href": "projects/stock_analyzer/index.html#toggle-settings",
+    "title": "Shiny Stock Analyzer App",
+    "section": "Toggle Settings",
+    "text": "Toggle Settings\nHit the settings icon to toggle user inputs. Here you’ll find settings for;\n\nShort Moving Average (Days) - Number of days to calculate short rolling moving average. Max is 40 days.\nLong Moving Average (Days) - Number of days to calculate long rolling moving average. Max is 120 days.\nTime Window (Days) - The number of look back days for analyzing stocks. Max is\n\n\n\n\n\n\n\n\n\nOnce you have your ideal settings, hit Apply & Save to update the trend analysis in the main chart. Hit the settings icon again to hide the user inputs."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#adding-new-favorite-stocks",
+    "href": "projects/stock_analyzer/index.html#adding-new-favorite-stocks",
+    "title": "Shiny Stock Analyzer App",
+    "section": "Adding New Favorite Stocks",
+    "text": "Adding New Favorite Stocks\nTo add a new favorite stock, first hit the Stock List drop down to select a new stock, then hit the heart icon to add it as favorite and create a new favorite card. Also hit the ANALYZE button to add the trend analysis for the new stock as the Last Analysis"
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#clearing-favorites",
+    "href": "projects/stock_analyzer/index.html#clearing-favorites",
+    "title": "Shiny Stock Analyzer App",
+    "section": "Clearing Favorites",
+    "text": "Clearing Favorites\nThe user can clear favorites by either removing a single stock as favorite or removing all stocks currently listed as favorites. To do so, hit the CLEAR FAVORITES button. To remove a single stock, select the stock from the drop down list, then hit CLEAR SINGLE. to remove all stocks, just hit the CLEAR ALL FAVORRITES button. Hit EXIT when done."
   }
 ]
