@@ -1,0 +1,11 @@
+.shaded-border {
+  /*border: 2px solid #888; /* Adjust the color and width as desired */
+  box-shadow: 2px 2px 4px #aaa; /* This creates the 'shade' effect */
+}
+
+
+#fig-id + figcaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.8em;
+}
