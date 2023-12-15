@@ -102,7 +102,7 @@
     "href": "projects.html",
     "title": "Explore My Data Science Portfolio",
     "section": "",
-    "text": "Discover how I harness the power of data and analytics through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights.\n\n\n\n\n\n\nNote\n\n\n\nShorter excerpt of some of these projects are available on Medium\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nMachine Learning for Email Lead Scoring\n\n\nA Case Study of Predictive Analytics in Marketing\n\n\n\n\npredictive analytics\n\n\nmarketing analytics\n\n\nmachine learning\n\n\nroi analysis\n\n\n\n\n\n\n\n\n\n\n\nDec 2, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nAdvanced Predictive Analytics for Managing Overnight Shelter Capacity\n\n\nUnifying BigQuery DBT, H2o, and APIs for Social Good\n\n\n\n\npredictive analytics\n\n\nmachine learning\n\n\ndata modeling\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nPredicting Hourly Bike Rentals\n\n\nIn Persuit of Model Accuracy\n\n\n\n\npredictive analytics\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nCustomer Segmentation & Persona Creation in the Banking Industry\n\n\nA Case Study Using K-Means Algorithm\n\n\n\n\ncustomer segmentation\n\n\n\n\n\n\n\n\n\n\n\nMay 13, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nStrategic Bike Pricing: Harnessing Machine Learning for Market Edge\n\n\nAn Analytic Approach to Competitive Price Modeling in Bike Manufacturing\n\n\n\n\nmachine learning\n\n\nweb scraping\n\n\nshiny\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2022\n\n\nLucas Okwudishu\n\n\n\n\n\n\nNo matching items"
+    "text": "Discover how I harness the power of data and analytics through machine learning, predictive analytics, and insightful visualizations. Each project is a unique story of challenges met with innovative solutions, crafted to turn complex data into actionable insights.\n\n\n\n\n\n\nNote\n\n\n\nShorter excerpt of some of these projects are available on Medium\n\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nShiny Stock Analyzer App\n\n\n\n\n\n\n\nstocks shiny AWS MongoDB Docker\n\n\n\n\n\n\n\n\n\n\n\nDec 15, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nMachine Learning for Email Lead Scoring\n\n\nA Case Study of Predictive Analytics in Marketing\n\n\n\n\npredictive analytics\n\n\nmarketing analytics\n\n\nmachine learning\n\n\nroi analysis\n\n\n\n\n\n\n\n\n\n\n\nDec 2, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nAdvanced Predictive Analytics for Managing Overnight Shelter Capacity\n\n\nUnifying BigQuery DBT, H2o, and APIs for Social Good\n\n\n\n\npredictive analytics\n\n\nmachine learning\n\n\ndata modeling\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nPredicting Hourly Bike Rentals\n\n\nIn Persuit of Model Accuracy\n\n\n\n\npredictive analytics\n\n\nmachine learning\n\n\n\n\n\n\n\n\n\n\n\nJul 29, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nCustomer Segmentation & Persona Creation in the Banking Industry\n\n\nA Case Study Using K-Means Algorithm\n\n\n\n\ncustomer segmentation\n\n\n\n\n\n\n\n\n\n\n\nMay 13, 2023\n\n\nLucas Okwudishu\n\n\n\n\n\n\n  \n\n\n\n\nStrategic Bike Pricing: Harnessing Machine Learning for Market Edge\n\n\nAn Analytic Approach to Competitive Price Modeling in Bike Manufacturing\n\n\n\n\nmachine learning\n\n\nweb scraping\n\n\nshiny\n\n\n\n\n\n\n\n\n\n\n\nNov 2, 2022\n\n\nLucas Okwudishu\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/toronto_shelter_project/index.html",
@@ -229,5 +229,40 @@
     "title": "Machine Learning for Email Lead Scoring",
     "section": "10.1 API",
     "text": "10.1 API\nOur API, developed using FastAPI, features several endpoints, each serving a specific purpose;\n\nMain Endpoint (\"/\") This is the landing page of our API. It provides users with a welcoming interface and guides them to the API documentation. This endpoint is crucial for user orientation and ease of use.\nGet Email Subscribers (\"/get_email_subscribers\") This GET endpoint exposes our email subscriber data. When accessed, it returns the data with scored leads in JSON format. It’s vital for stakeholders to view and understand the current leads database.\nData Reception (\"/data\") A POST endpoint designed to receive data. Users can submit data in JSON format, which is then processed and stored. This endpoint is essential for updating our leads database with new information.\nLead Scoring Prediction (\"/predict\") This POST endpoint is the heart of our API. It accepts lead data and returns scored leads, using our proprietary lead scoring models. It enables the application of our predictive model to new or existing data for real-time lead scoring.\nLead Scoring Strategy Calculation (\"/calculate_lead_strategy\") Another POST endpoint, it calculates and optimizes lead scoring strategies based on various parameters (e.g., sales reduction safeguard, email list size). This is crucial for strategic decision-making and marketing optimization.\n\nAPIs play a pivotal role in the data science lifecycle, especially in the deployment phase. They enable the seamless integration of data science models into business processes, making predictive insights accessible and actionable for decision-makers. APIs facilitate real-time data processing and interaction, which is essential for dynamic and responsive business strategies."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html",
+    "href": "projects/stock_analyzer/index.html",
+    "title": "Shiny Stock Analyzer App",
+    "section": "",
+    "text": "In data science, the ability to transform complex analysis into interactive, user-friendly applications (also known as deployment) is crucial. R, with its vast ecosystem of packages including Shiny are important tools for creating such web applications. However, the journey from a concept to a production-grade application involves more than just developing the core analytical features. It requires a robust architecture that ensures reliability, scalability, and security.\nThis project demonstrates how a combination of cutting-edge technologies can be used to deploy a stock analysis application that meets these production-grade standards."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#tidyquant-the-analytical-core",
+    "href": "projects/stock_analyzer/index.html#tidyquant-the-analytical-core",
+    "title": "Shiny Stock Analyzer App",
+    "section": "Tidyquant: The Analytical Core",
+    "text": "Tidyquant: The Analytical Core\nTidyquant, an R package, is the starting point in our application. It provides a comprehensive API for extracting stocks data and performing intricate financial analyses. Tidyquant integrates seamlessly with the R ecosystem, bringing financial modeling, performance measurement, and risk management capabilities to the table."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#r-and-shiny-the-frontend-duo",
+    "href": "projects/stock_analyzer/index.html#r-and-shiny-the-frontend-duo",
+    "title": "Shiny Stock Analyzer App",
+    "section": "R and Shiny: The Frontend Duo",
+    "text": "R and Shiny: The Frontend Duo\nAt the heart of our application’s user interface are R and Shiny. These are essential in converting complex data analyses into engaging and interactive visualizations and dashboards. Shiny’s reactivity and R’s analytical power create a dynamic environment where users can interact with the data in real-time, making it an ideal choice for data science applications."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#amazon-ec2-scalable-hosting",
+    "href": "projects/stock_analyzer/index.html#amazon-ec2-scalable-hosting",
+    "title": "Shiny Stock Analyzer App",
+    "section": "Amazon EC2: Scalable Hosting",
+    "text": "Amazon EC2: Scalable Hosting\nAmazon EC2 forms the backbone of our application hosting. It offers scalable computing capacity in the cloud, which is crucial for handling varying loads, ensuring that the application remains responsive and available, even during peak usage times."
+  },
+  {
+    "objectID": "projects/stock_analyzer/index.html#mongodb-atlas-secure-credential-storage",
+    "href": "projects/stock_analyzer/index.html#mongodb-atlas-secure-credential-storage",
+    "title": "Shiny Stock Analyzer App",
+    "section": "MongoDB Atlas: Secure Credential Storage",
+    "text": "MongoDB Atlas: Secure Credential Storage\nMongoDB Atlas is used for managing and storing authentication credentials securely. Its role is critical in maintaining the security and integrity of user data, a paramount aspect for any application, especially those dealing with sensitive financial information. In addition to storing user credentials, MongoDB is also used to user settings in the application, allowing the user to save stock analysis and retrieve such analysis when the log in later on."
   }
 ]
