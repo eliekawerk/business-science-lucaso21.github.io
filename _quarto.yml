@@ -4,7 +4,9 @@ project:
 
 website:
   title: "Lucas Okwudishu"
-  site-url: "https://lucaso21.github.io"
+  site-url: "https://lokwudishu.com"
+  favicon: "Lucas Okwudishu"
+  #site-url: "https://lucaso21.github.io"
   navbar:
     left:
       - href: index.qmd

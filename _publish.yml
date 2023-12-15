@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 08dcb20f-b9e3-423f-89a4-6a39b3fe3cac
+      url: 'https://lokwudishu.com'

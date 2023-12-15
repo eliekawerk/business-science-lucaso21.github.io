@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lucaso21.github.io/index.html</loc>
-    <lastmod>2023-12-15T14:22:21.065Z</lastmod>
+    <loc>https://lokwudishu.com/blog.html</loc>
+    <lastmod>2023-12-15T18:01:22.774Z</lastmod>
   </url>
   <url>
-    <loc>https://lucaso21.github.io/projects/customer_segmentation_banking/index.html</loc>
-    <lastmod>2023-12-15T14:22:40.651Z</lastmod>
+    <loc>https://lokwudishu.com/index.html</loc>
+    <lastmod>2023-12-15T18:01:20.081Z</lastmod>
   </url>
   <url>
-    <loc>https://lucaso21.github.io/projects.html</loc>
-    <lastmod>2023-12-15T14:50:13.348Z</lastmod>
+    <loc>https://lokwudishu.com/projects/bike_price_recommender/index.html</loc>
+    <lastmod>2023-12-15T18:01:18.185Z</lastmod>
   </url>
   <url>
-    <loc>https://lucaso21.github.io/projects/toronto_shelter_project/index.html</loc>
-    <lastmod>2023-12-02T22:29:15.398Z</lastmod>
+    <loc>https://lokwudishu.com/projects/email_lead_scoring/index.html</loc>
+    <lastmod>2023-12-15T18:01:12.871Z</lastmod>
   </url>
   <url>
-    <loc>https://lucaso21.github.io/projects/bike_rental_prediction/index.html</loc>
-    <lastmod>2023-11-06T01:44:37.546Z</lastmod>
+    <loc>https://lokwudishu.com/projects/toronto_shelter_project/index.html</loc>
+    <lastmod>2023-12-15T18:01:05.988Z</lastmod>
   </url>
   <url>
-    <loc>https://lucaso21.github.io/projects/bike_price_recommender/index.html</loc>
-    <lastmod>2023-11-06T10:55:09.936Z</lastmod>
+    <loc>https://lokwudishu.com/projects/bike_rental_prediction/index.html</loc>
+    <lastmod>2023-12-15T18:00:59.829Z</lastmod>
   </url>
   <url>
-    <loc>https://lucaso21.github.io/blog.html</loc>
-    <lastmod>2023-11-08T03:19:06.522Z</lastmod>
+    <loc>https://lokwudishu.com/projects/stock_analyzer/index.html</loc>
+    <lastmod>2023-12-15T18:01:07.517Z</lastmod>
   </url>
   <url>
-    <loc>https://lucaso21.github.io/projects/email_lead_scoring/index.html</loc>
-    <lastmod>2023-12-15T11:00:54.093Z</lastmod>
+    <loc>https://lokwudishu.com/projects/customer_segmentation_banking/index.html</loc>
+    <lastmod>2023-12-15T18:01:17.310Z</lastmod>
   </url>
   <url>
-    <loc>https://lucaso21.github.io/projects/stock_analyzer/index.html</loc>
-    <lastmod>2023-12-15T14:50:10.966Z</lastmod>
+    <loc>https://lokwudishu.com/projects.html</loc>
+    <lastmod>2023-12-15T18:01:19.628Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lokwudishu.com/about.html</loc>
+    <lastmod>2023-12-15T18:01:22.329Z</lastmod>
   </url>
 </urlset>
